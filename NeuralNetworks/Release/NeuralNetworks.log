@@ -1,0 +1,47 @@
+﻿  main.cpp
+C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(346): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\NeuralNetwork.h(23): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\NeuralNetwork.h(49): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\NeuralNetwork.h(69): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\NeuralNetwork.h(84): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\NeuralNetwork.h(93): warning C4018: '<': signed/unsigned mismatch
+main.cpp(25): warning C4018: '<': signed/unsigned mismatch
+  Generating code
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(187): warning C4711: function 'int __thiscall Vector::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(278): warning C4711: function 'double & __thiscall Vector::operator[](int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(226): warning C4711: function '__thiscall Vector::Vector(unsigned int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(228): warning C4711: function 'double & __thiscall Vector::operator[](int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonlinearityfunction.h(68): warning C4715: 'nonLinearityFunct::nonLin': not all control paths return a value
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonlinearityfunction.h(46): warning C4715: 'nonLinearityFunct::operator()': not all control paths return a value
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(285): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(double)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(285): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char const *)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonlinearityfunction.h(61): warning C4715: 'nonLinearityFunct::d': not all control paths return a value
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(73): warning C4711: function 'int __thiscall Vector::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(320): warning C4710: 'void __thiscall Vector::chkBounds(int)const ': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(57): warning C4710: 'void __thiscall Vector::chkBounds(int)const ': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(178): warning C4710: 'void __thiscall Vector::chkBounds(class Vector const &)const ': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(180): warning C4711: function 'int __thiscall Vector::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(160): warning C4710: 'void __thiscall Vector::chkBounds(class Vector const &)const ': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(162): warning C4711: function 'int __thiscall Vector::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(143): warning C4711: function '__thiscall Vector::Vector(unsigned int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(145): warning C4711: function 'double & __thiscall Vector::operator[](int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(133): warning C4711: function '__thiscall Vector::Vector(unsigned int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(135): warning C4711: function 'double & __thiscall Vector::operator[](int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(123): warning C4711: function '__thiscall Vector::Vector(unsigned int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(125): warning C4711: function 'double & __thiscall Vector::operator[](int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(112): warning C4710: 'void __thiscall Matrix::chkBounds(int,int)const ': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(297): warning C4710: 'void __thiscall Matrix::chkBounds(class Matrix const &)const ': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(299): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(300): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(286): warning C4710: 'void __thiscall Matrix::chkBounds(class Matrix const &)const ': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(288): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(289): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(206): warning C4711: function '__thiscall Matrix::Matrix(unsigned int,unsigned int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(370): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(370): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(370): warning C4711: function '__thiscall Matrix::Matrix(unsigned int,unsigned int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(372): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(373): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+  Finished generating code
+  NeuralNetworks.vcxproj -> C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\Release\NeuralNetworks.exe
+  NeuralNetworks.vcxproj -> C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\Release\NeuralNetworks.pdb (Full PDB)
