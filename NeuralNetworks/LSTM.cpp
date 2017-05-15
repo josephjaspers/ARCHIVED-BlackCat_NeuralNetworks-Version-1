@@ -282,6 +282,36 @@ void LSTM::updateGradients()
 
 }
 
+void LSTM::set_ForgetGate_Sigmoid()
+{
+	f_g.setSigmoid();
+}
+
+void LSTM::set_ForgetGate_Tanh()
+{
+	f_g.setTanh();
+}
+
+void LSTM::set_InputGate_Sigmoid()
+{
+	i_g.setSigmoid();
+}
+
+void LSTM::set_InputGate_Tanh()
+{
+	i_g.setTanh();
+}
+
+void LSTM::set_OutputGate_Sigmoid()
+{
+	o_g.setSigmoid();
+}
+
+void LSTM::set_OutputGate_Tanh()
+{
+	o_g.setTanh();
+}
+
 void LSTM::storeGradients()
 {
 	wz_gradientStorage -= dz * x;

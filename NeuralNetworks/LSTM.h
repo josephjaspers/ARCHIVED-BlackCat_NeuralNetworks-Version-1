@@ -9,70 +9,41 @@ class LSTM : public Layer {
 	nonLinearityFunct i_g; //input gate nonlinearity function 
 	nonLinearityFunct o_g; //output gate nonLinearity function
 
-	Vector c;
-	Vector dc;
+	Vector c;				//cellstate
+	Vector dc;				//error of cell state
 
-	Vector y;
+	Vector y;				//current output (or last during BP)
 
-	Vector x;
-	Vector f;
-	Vector z;
-	Vector i;
-	Vector o;
+	Vector x;				//current input
+	Vector f, i, z, o;		//current activations for forget, input, write, output gate
 
-	Vector bz;
-	Vector dz;
-	Matrix wz;
-	Matrix rz;
+	Vector bz, bi, bf, bo;	//Bias Vectors for gate
+	Vector dz, di, df, od;	//error of each gate
+	Matrix wz, wi, wf, wo;	//feed forward weights of each gate
+	Matrix rz, ri, rf, ro;	//recurrent weights of each gate
 
-	Vector bi;
-	Vector di;
-	Matrix wi;
-	Matrix ri;
+	Vector bz_gradientStorage, bi_gradientStorage, bf_gradientStorage, bo_gradientStorage; //Bias gradient storage of gates
+	Matrix wz_gradientStorage, wi_gradientStorage, wf_gradientStorage, wo_gradientStorage; //Weight gradient storage of gates
+	Matrix rz_gradientStorage, ri_gradientStorage, rf_gradientStorage, ro_gradientStorage; //recurrnet gradient storage of gates
 
-	Vector bf;
-	Vector df;
-	Matrix wf;
-	Matrix rf;
-
-	Vector bo;
-	Vector od; //inversed as "do" is in stdlib
-	Matrix wo;
-	Matrix ro;
-
-	Vector bz_gradientStorage;
-	Matrix wz_gradientStorage;
-	Matrix rz_gradientStorage;
-
-	Vector bi_gradientStorage;
-	Matrix wi_gradientStorage;
-	Matrix ri_gradientStorage;
-
-	Vector bf_gradientStorage;
-	Matrix wf_gradientStorage;
-	Matrix rf_gradientStorage;
-
-	Vector bo_gradientStorage;
-	Matrix wo_gradientStorage;
-	Matrix ro_gradientStorage;
-
-	bpStorage bpX;
-	bpStorage bpC;
-	bpStorage bpF;
-	bpStorage bpZ;
-	bpStorage bpI;
-	bpStorage bpO;
-	bpStorage bpY;
+	//back propagation storages for...
+	bpStorage bpX;	//inputs
+	bpStorage bpC;	//cellstate
+	bpStorage bpF;	//forget gate output
+	bpStorage bpZ;	//write gate output
+	bpStorage bpI;	//input gate output
+	bpStorage bpO;	//output gate output
+	bpStorage bpY;	//LSTM layer output
 
 
-	const Vector& Xt(); //inputs
-	const Vector& Ct();
-	const Vector& Ct_1();
-	const Vector& Ft();
-	const Vector& Zt();
-	const Vector& It();
-	const Vector& Ot();
-	const Vector& Yt();
+	const Vector& Xt(); //inputs at T
+	const Vector& Ct();	//cellstate at T
+	const Vector& Ct_1();//cellstate at T minus 1
+	const Vector& Ft();	//forget activations at T
+	const Vector& Zt();	//write activations at T
+	const Vector& It();	//input activations at T
+	const Vector& Ot();	//output activations at T
+	const Vector& Yt();	//y activations at T
 
 public:
 	LSTM(int inputs, int outputs);
@@ -85,12 +56,20 @@ public:
 	void clearGradients();
 	void updateGradients();
 
+	void set_ForgetGate_Sigmoid();
+	void set_ForgetGate_Tanh();
+
+	void set_InputGate_Sigmoid();
+	void set_InputGate_Tanh();
+	
+	void set_OutputGate_Sigmoid();
+	void set_OutputGate_Tanh();
 
 private:
-	void storeGradients();
-	void storeGradients_BPTT();
-	void bpStorage_pop_back_all();
-	void updateBPStorage();
+	void storeGradients();			//encapsulation of storing gradients 
+	void storeGradients_BPTT();		//encapsulation of storing gradients at BPTT
+	void bpStorage_pop_back_all();	//encapsulation of removing the bp storages
+	void updateBPStorage();			//encapsulation of updating the bpstorages
 };
 #endif
 
