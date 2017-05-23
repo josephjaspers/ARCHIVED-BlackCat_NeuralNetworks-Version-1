@@ -31,7 +31,6 @@ Vector FeedForward::forwardPropagation_express(const Vector & x)
 Vector FeedForward::forwardPropagation(const Vector & x)
 {
 	bpX.push_back(x); //store the inputs
-
 	if (next != nullptr)
 		return next->forwardPropagation(g(w * x + b));
 	else
@@ -47,7 +46,7 @@ Vector FeedForward::backwardPropagation(const Vector & dy)
 	Vector& dx = w.T() * dy & g.d(Xt());
 	//update storage
 	bpX.pop_back();
-	//continue backprop
+	//continue backprop0
 	if (prev != nullptr)
 		return prev->backwardPropagation(dx);
 	else
@@ -74,16 +73,50 @@ Vector FeedForward::backwardPropagation_ThroughTime(const Vector & dy)
 void FeedForward::clearBPStorage()
 {
 	bpX.clear();
+	Layer::clearBPStorage();
 }
 
 void FeedForward::clearGradients()
 {
 	Matrix::fill(w_gradientStorage, 0);
 	Vector::fill(b_gradientStorage, 0);
+	Layer::clearGradients();
 }
 
 void FeedForward::updateGradients()
 {
 	w += w_gradientStorage & lr;
 	b += b_gradientStorage & lr;
+	Layer::updateGradients();
 }
+
+FeedForward* FeedForward::read(std::ifstream & is)
+{
+	int inputs, outputs;
+	is >> inputs;
+	is >> outputs;
+	FeedForward* ff = new FeedForward(inputs, outputs);
+
+	ff->b = Vector::read(is);
+	ff->w = Matrix::read(is);
+	ff->g.read(is);
+
+	return ff;
+}
+
+void FeedForward::write(std::ofstream & os)
+{
+	os << NUMB_INPUTS << ' ';
+	os << NUMB_OUTPUTS << ' ';
+
+	b.write(os);	//write bias weights
+	w.write(os);	//write os weights
+
+	g.write(os);	//write non linearity 
+}
+
+void FeedForward::writeClass(std::ofstream & os)
+{
+	os << 0 << ' ';
+}
+

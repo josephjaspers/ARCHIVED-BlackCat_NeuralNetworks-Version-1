@@ -4,15 +4,15 @@
 
 class LSTM : public Layer {
 
-	nonLinearityFunct f_g; //forget nonlinearity funct 
 	nonLinearityFunct z_g; //input gate nonlinearity function 
 	nonLinearityFunct i_g; //input gate nonlinearity function 
+	nonLinearityFunct f_g; //forget nonlinearity funct 
 	nonLinearityFunct o_g; //output gate nonLinearity function
 
 	Vector c;				//cellstate
 	Vector dc;				//error of cell state
 
-	Vector y;				//current output (or last during BP)
+	Vector y;				//current output (or output during BP)
 
 	Vector x;				//current input
 	Vector f, i, z, o;		//current activations for forget, input, write, output gate
@@ -55,6 +55,10 @@ public:
 	void clearBPStorage();
 	void clearGradients();
 	void updateGradients();
+	
+	static LSTM* read(std::ifstream& is);
+	void write(std::ofstream& os);
+	void writeClass(std::ofstream& os);
 
 	void set_ForgetGate_Sigmoid();
 	void set_ForgetGate_Tanh();

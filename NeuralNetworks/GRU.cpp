@@ -22,7 +22,7 @@ const Vector & GRU::Ct_1()
 		return OUTPUT_ZEROS;
 	}
 	else {
-		return bpC[bpC.size() - 2]; //return second to last 
+		return bpC[bpC.size() - 2]; //return second to output 
 	}
 }
 
@@ -180,12 +180,33 @@ Vector GRU::backwardPropagation_ThroughTime(const Vector & dy)
 		return dx;
 }
 
+void GRU::set_ForgetGate_Sigmoid()
+{
+	f_g.setSigmoid();
+}
+
+void GRU::set_ForgetGate_Tanh()
+{
+	f_g.setTanh();
+}
+
+void GRU::set_WriteGate_Sigmoid()
+{
+	z_g.setSigmoid();
+}
+
+void GRU::set_WriteGate_Tanh()
+{
+	z_g.setTanh();
+}
+
 void GRU::clearBPStorage()
 {
 	bpF.clear();
 	bpZ.clear();
 	bpX.clear();
 	bpC.clear();
+	Layer::clearBPStorage();
 }
 
 void GRU::clearGradients()
@@ -197,6 +218,8 @@ void GRU::clearGradients()
 	Matrix::fill(wf_gradientStorage, 0);
 	Matrix::fill(rf_gradientStorage, 0);
 	Vector::fill(bf_gradientStorage, 0);
+
+	Layer::clearGradients();
 }
 
 void GRU::updateGradients()
@@ -209,5 +232,61 @@ void GRU::updateGradients()
 	bf += bf_gradientStorage & lr;
 	rf += rf_gradientStorage & lr;
 
+	Layer::updateGradients();
 }
 
+GRU* GRU::read(std::ifstream & is)
+{
+	int inputs, outputs;
+	is >> inputs;
+	is >> outputs;
+
+	GRU* gru = new GRU(inputs, outputs);
+
+	gru->c = Vector::read(is);
+	gru->x = Vector::read(is);
+	gru->f = Vector::read(is);
+	gru->z = Vector::read(is);
+
+	gru->bz = Vector::read(is);
+	gru->wz = Matrix::read(is);
+	gru->rz = Matrix::read(is);
+
+	gru->bf = Vector::read(is);
+	gru->wf = Matrix::read(is);
+	gru->rf = Matrix::read(is);
+
+	gru->g.read(is);
+	gru->f_g.read(is);
+	gru->z_g.read(is);
+
+	return gru;
+}
+
+void GRU::write(std::ofstream & os)
+{
+	os << NUMB_INPUTS << ' ';
+	os << NUMB_OUTPUTS << ' ';
+
+	c.write(os);
+	x.write(os);
+	f.write(os);
+	z.write(os);
+
+	bz.write(os);
+	wz.write(os);
+	rz.write(os);
+
+	bf.write(os);
+	wf.write(os);
+	rf.write(os);
+
+	g.write(os);
+	f_g.write(os);
+	z_g.write(os);
+}
+
+void GRU::writeClass(std::ofstream & os)
+{
+	os << 1 << ' ';
+}

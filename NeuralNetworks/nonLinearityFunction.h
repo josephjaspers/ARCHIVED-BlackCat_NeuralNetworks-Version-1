@@ -5,8 +5,10 @@
 #include "Matrices.h"
 class nonLinearityFunct {
 	static constexpr double e = 2.71828;
+	//the current non_linearity function being used 
+	int nonLinearity = 0;
 
-	//These are the crush functions 
+	//nonlinear functions & derivatives
 	static Vector& sigmoid(Vector& x) {
 		for (int i = 0; i < x.length(); ++i) {
 			x[i] = 1 / (1 + pow(2.7182, -x[i]));
@@ -31,8 +33,31 @@ class nonLinearityFunct {
 		}
 		return x;
 	}
-
-	int nonLinearity = 0;
+	static Vector& softMax(Vector& x) {
+		double sum = 0;
+		for (int i = 0; i < x.length(); ++i) {
+			x[i] = pow(e, x[i]);
+			sum += x[i];
+		}
+		for (int i = 0; i < x.length(); ++i) {
+			x[i] /= sum;
+		}
+		return x;
+	}
+	static Vector& reLU(Vector& x) {
+		for (int i = 0; i < x.length(); ++i) {
+			if (x[i] < 0) {
+				x[i] = 0;
+			}
+			else if (x[i] > 1) {
+				x[i] = 1;
+			}
+		}
+		return x;
+	}
+	static Vector reLU_deriv(Vector x) {
+		return reLU(x);
+	}
 
 public:
 
@@ -41,6 +66,8 @@ public:
 		switch (nonLinearity) {
 		case 0: return sigmoid(x);
 		case 1: return tanh(x);
+		case 2: return softMax(x);
+		case 3: return reLU(x);
 		default: std::cout << " nonlineariy function not enabled -- returning without effect " << std::endl;
 		}
 	}
@@ -49,6 +76,8 @@ public:
 		switch (nonLinearity) {
 		case 0: return sigmoid_deriv(x);
 		case 1: return tanh_deriv(x);
+		case 2: return sigmoid_deriv(x); //softmax deriv = sigmoid deriv
+		case 3: return reLU_deriv(x);
 		default: std::cout << " non linerity deriv error: set to invalid integer, returning " << std::endl;
 		}
 	}
@@ -56,6 +85,8 @@ public:
 		switch (nonLinearity) {
 		case 0: return sigmoid_deriv(x);
 		case 1: return tanh_deriv(x);
+		case 2: return sigmoid_deriv(x); //softmax deriv is same as sigmoid deriv
+		case 3: return reLU_deriv(x);
 		default: std::cout << " non linerity deriv error: set to invalid integer, returning " << std::endl;
 		}
 	}
@@ -64,14 +95,26 @@ public:
 		switch (nonLinearity) {
 		case 0: return sigmoid(x);
 		case 1: return tanh(x);
+		case 2: return softMax(x);
+		case 3: return reLU(x);
 		}
 	}
 
+	void setNonLinearityFunction(int i) {
+		nonLinearity = i;
+	}
 	void setSigmoid() {
 		nonLinearity = 0;
 	}
 	void setTanh() {
 		nonLinearity = 1;
+	}
+
+	void read(std::ifstream& is) {
+		is >> nonLinearity;
+	}
+	void write(std::ofstream& os) {
+		os << nonLinearity << ' ';
 	}
 
 };

@@ -22,7 +22,7 @@ const Vector & LSTM::Ct_1()
 		return OUTPUT_ZEROS;
 	}
 	else {
-		return bpC[bpC.size() - 2]; //return second to last 
+		return bpC[bpC.size() - 2]; //return second to output 
 	}
 }
 
@@ -149,10 +149,8 @@ LSTM::LSTM(int inputs, int outputs) : Layer(inputs, outputs)
 	Matrices::randomize(ro, 0, 5);
 }
 
-Vector LSTM::forwardPropagation_express(const Vector & input)
+Vector LSTM::forwardPropagation_express(const Vector & x)
 {
-	x = input;
-
 	f = f_g(wf * x + rf * y + bf);
 	z = z_g(wz * x + rz * y + bz);
 	i = i_g(wi * x + ri * y + bi);
@@ -172,9 +170,8 @@ Vector LSTM::forwardPropagation_express(const Vector & input)
 Vector LSTM::forwardPropagation(const Vector & input)
 {
 	updateBPStorage(); //stores all the current activations 
-	//Math 
-	x = input;
 
+	x = input;
 	f = f_g(wf * x + rf * y + bf);
 	z = z_g(wz * x + rz * y + bz);
 	i = i_g(wi * x + ri * y + bi);
@@ -183,7 +180,7 @@ Vector LSTM::forwardPropagation(const Vector & input)
 	c &= f;
 	c += (z & i);
 
-	y = g.nonLin(c) & o;
+	y = g.nonLin(c) & o; //g -parenthesis operator applies the nonlinearity function to a reference to the parameter, nonLin creates and returns a copy. (This preserves the original cell state)
 
 	//continue forwardprop
 	if (next != nullptr)
@@ -195,7 +192,7 @@ Vector LSTM::forwardPropagation(const Vector & input)
 Vector LSTM::backwardPropagation(const Vector & dy)
 {
 	//calculate gate errors
-	dc = dy & o & g.d(c);
+	dc = dy & o & g.d(g.nonLin(c));
 	od = dy & g.nonLin(c) & o_g.d(o);
 	df = dc & Ct() & f_g.d(f);
 	dz = dc & i & z_g.d(z);
@@ -220,7 +217,7 @@ Vector LSTM::backwardPropagation_ThroughTime(const Vector & deltaError)
 	//calculate delta 
 	Vector& dy = deltaError + rz.T() * dz + ri.T() * di + rf.T() * df + ro.T() * od;
 	//math of error 
-	dc += dy & g.d(y) & Ot();
+	dc += dy & g.d(y) & Ot() & g.d(g.nonLin(Ct()));
 	od = dc & g.nonLin(Ct()) & o_g.d(Ot());
 	df = dc & Ct_1() & f_g.d(Ft());
 	dz = dc & It() & z_g.d(Zt());
@@ -249,6 +246,8 @@ void LSTM::clearBPStorage()
 	bpC.clear();
 	bpI.clear();
 	bpO.clear();
+
+	Layer::clearBPStorage();
 }
 
 void LSTM::clearGradients()
@@ -264,6 +263,8 @@ void LSTM::clearGradients()
 	Matrix::fill(wf_gradientStorage, 0);
 	Matrix::fill(rf_gradientStorage, 0);
 	Vector::fill(bf_gradientStorage, 0);
+
+	Layer::clearGradients();
 }
 
 void LSTM::updateGradients()
@@ -280,6 +281,66 @@ void LSTM::updateGradients()
 	bf += bf_gradientStorage & lr;
 	rf += rf_gradientStorage & lr;
 
+	Layer::updateGradients();
+}
+
+LSTM* LSTM::read(std::ifstream & is)
+{
+	int inputs, outputs;
+	is >> inputs;
+	is >> outputs;
+
+	LSTM* lstm = new LSTM(inputs, outputs);
+
+	lstm->c = Vector::read(is);
+	lstm->x = Vector::read(is);
+	lstm->y = Vector::read(is);
+	lstm->f = Vector::read(is);
+	lstm->i = Vector::read(is);
+	lstm->z = Vector::read(is);
+	lstm->o = Vector::read(is);
+
+	lstm->bz = Vector::read(is); lstm->bi = Vector::read(is); lstm->bf = Vector::read(is); lstm->bo = Vector::read(is);
+	lstm->wz = Matrix::read(is); lstm->wi = Matrix::read(is); lstm->wf = Matrix::read(is); lstm->wo = Matrix::read(is);
+	lstm->rz = Matrix::read(is); lstm->ri = Matrix::read(is); lstm->rf = Matrix::read(is); lstm->ro = Matrix::read(is);
+
+	lstm->g.read(is);
+	lstm->z_g.read(is);
+	lstm->i_g.read(is);
+	lstm->f_g.read(is);
+	lstm->o_g.read(is);
+
+	return lstm;
+}
+
+void LSTM::write(std::ofstream & os)
+{
+	os << NUMB_INPUTS << ' ';
+	os << NUMB_OUTPUTS << ' ';
+
+	c.write(os);
+	x.write(os);
+	y.write(os);
+	f.write(os);
+	i.write(os);
+	z.write(os);
+	o.write(os);
+
+	bz.write(os); bi.write(os); bf.write(os); bo.write(os);
+	wz.write(os); wi.write(os); wf.write(os); wo.write(os);
+	rz.write(os); ri.write(os); rf.write(os); ro.write(os);
+
+	g.write(os);
+	z_g.write(os);
+	i_g.write(os);
+	f_g.write(os);
+	o_g.write(os);
+
+}
+
+void LSTM::writeClass(std::ofstream & os)
+{
+	os << 2 << ' ';
 }
 
 void LSTM::set_ForgetGate_Sigmoid()

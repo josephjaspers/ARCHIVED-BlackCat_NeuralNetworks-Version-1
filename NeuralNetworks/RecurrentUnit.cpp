@@ -97,6 +97,8 @@ void RecurrentUnit::clearBPStorage()
 {
 	bpX.clear();
 	bpC.clear();
+
+	Layer::clearBPStorage();
 }
 
 void RecurrentUnit::clearGradients()
@@ -104,6 +106,8 @@ void RecurrentUnit::clearGradients()
 	Matrix::fill(w_gradientStorage, 0);
 	Matrix::fill(r_gradientStorage, 0);
 	Vector::fill(b_gradientStorage, 0);
+
+	Layer::clearGradients();
 }
 
 void RecurrentUnit::updateGradients()
@@ -111,4 +115,42 @@ void RecurrentUnit::updateGradients()
 	w += w_gradientStorage & lr;
 	b += b_gradientStorage & lr;
 	r += r_gradientStorage & lr;
+
+	Layer::updateGradients();
+}
+
+RecurrentUnit* RecurrentUnit::read(std::ifstream & is)
+{
+	int inputs, outputs;
+	is >> inputs;
+	is >> outputs;
+
+	RecurrentUnit* ru = new RecurrentUnit(inputs, outputs);
+
+	ru->b = Vector::read(is);
+	ru->c = Vector::read(is);
+	ru->w = Matrix::read(is);
+	ru->r = Matrix::read(is);
+
+	ru->g.read(is);
+
+	return ru;
+}
+
+void RecurrentUnit::write(std::ofstream & os)
+{
+	os << NUMB_INPUTS << ' ';
+	os << NUMB_OUTPUTS << ' ';
+
+	b.write(os);
+	c.write(os);
+	w.write(os);
+	r.write(os);
+
+	g.write(os);
+}
+
+void RecurrentUnit::writeClass(std::ofstream & os)
+{
+	os << 4 << ' ';
 }

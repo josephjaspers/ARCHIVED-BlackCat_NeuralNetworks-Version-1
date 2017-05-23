@@ -31,7 +31,7 @@ namespace testClass {
 		cout << "(" << index << ")" << " conf (" << best << ")" << endl << endl;
 	}
 
-	vector<vector<double>> getZero() {
+	vector<vector<double>> get_recurrent_Zero() {
 		vector<double> r1 = { 0,0,1,0,0 };
 		vector<double> r2 = { 0,1,0,1,0 };
 		vector<double> r3 = { 0,1,0,1,0 };
@@ -41,7 +41,7 @@ namespace testClass {
 		vector<vector<double>> n = { r1,r2,r3,r4,r5 };
 		return n;
 	}
-	vector<vector<double>> getOne() {
+	vector<vector<double>> get_recurrent_One() {
 		vector<double> r1 = { 0,1,1,0,0 };
 		vector<double> r2 = { 0,0,1,0,0 };
 		vector<double> r3 = { 0,0,1,0,0 };
@@ -51,7 +51,7 @@ namespace testClass {
 		vector<vector<double>> n = { r1,r2,r3,r4,r5 };
 		return n;
 	}
-	vector<vector<double>> getTwo() {
+	vector<vector<double>> get_recurrent_Two() {
 		vector<double> r1 = { 0,1,1,1,0 };
 		vector<double> r2 = { 0,0,0,1,0 };
 		vector<double> r3 = { 0,0,1,0,0 };
@@ -61,7 +61,7 @@ namespace testClass {
 		vector<vector<double>> n = { r1,r2,r3,r4,r5 };
 		return n;
 	}
-	vector<vector<double>> getThree() {
+	vector<vector<double>> get_recurrent_Three() {
 		vector<double> r1 = { 0,1,1,1,0 };
 		vector<double> r2 = { 0,0,0,1,0 };
 		vector<double> r3 = { 0,1,1,1,0 };
@@ -71,7 +71,7 @@ namespace testClass {
 		vector<vector<double>> n = { r1,r2,r3,r4,r5 };
 		return n;
 	}
-	vector<vector<double>> getFour() {
+	vector<vector<double>> get_recurrent_Four() {
 		vector<double> r1 = { 0,1,0,1,0 };
 		vector<double> r2 = { 0,1,0,1,0 };
 		vector<double> r3 = { 0,1,1,1,1 };
@@ -81,7 +81,7 @@ namespace testClass {
 		vector<vector<double>> n = { r1,r2,r3,r4,r5 };
 		return n;
 	}
-	vector<vector<double>> getFive() {
+	vector<vector<double>> get_recurrent_Five() {
 		vector<double> r1 = { 0,1,1,1,0 };
 		vector<double> r2 = { 0,1,0,0,0 };
 		vector<double> r3 = { 0,1,1,1,0 };
@@ -91,7 +91,7 @@ namespace testClass {
 		vector<vector<double>> n = { r1,r2,r3,r4,r5 };
 		return n;
 	}
-	vector<vector<double>> getSix() {
+	vector<vector<double>> get_recurrent_Six() {
 		vector<double> r1 = { 0,1,0,0,0 };
 		vector<double> r2 = { 0,1,0,0,0 };
 		vector<double> r3 = { 0,1,1,1,0 };
@@ -101,7 +101,7 @@ namespace testClass {
 		vector<vector<double>> n = { r1,r2,r3,r4,r5 };
 		return n;
 	}
-	vector<vector<double>> getSeven() {
+	vector<vector<double>> get_recurrent_Seven() {
 		vector<double> r1 = { 0,1,1,0,0 };
 		vector<double> r2 = { 0,0,0,1,0 };
 		vector<double> r3 = { 0,0,1,1,0 };
@@ -111,7 +111,7 @@ namespace testClass {
 		vector<vector<double>> n = { r1,r2,r3,r4,r5 };
 		return n;
 	}
-	vector<vector<double>> getEight() {
+	vector<vector<double>> get_recurrent_Eight() {
 		vector<double> r1 = { 0,1,1,1,0 };
 		vector<double> r2 = { 0,1,0,1,0 };
 		vector<double> r3 = { 0,1,1,1,0 };
@@ -121,7 +121,7 @@ namespace testClass {
 		vector<vector<double>> n = { r1,r2,r3,r4,r5 };
 		return n;
 	}
-	vector<vector<double>> getNine() {
+	vector<vector<double>> get_recurrent_Nine() {
 		vector<double> r1 = { 0,1,1,1,0 };
 		vector<double> r2 = { 0,1,0,1,0 };
 		vector<double> r3 = { 0,1,1,1,0 };
@@ -129,6 +129,97 @@ namespace testClass {
 		vector<double> r5 = { 0,0,0,1,0 };
 
 		vector<vector<double>> n = { r1,r2,r3,r4,r5 };
+		return n;
+	}
+
+	vector<double> getZero() {
+		vector<double> n =
+		{ 0,0,1,0,0,
+			0,1,0,1,0,
+			0,1,0,1,0,
+			0,1,0,1,0,
+			0,0,1,0,0, };
+		return n;
+	}
+	vector<double> getOne() {
+		vector<double> n =
+		{ 0,1,1,0,0,
+			0,0,1,0,0,
+			0,0,1,0,0,
+			0,0,1,0,0,
+			0,1,1,1,0, };
+		return n;
+	}
+	vector<double> getTwo() {
+		vector<double> n =
+		{ 0,1,1,1,0,
+			0,0,0,1,0,
+			0,0,1,0,0,
+			0,1,0,0,0,
+			0,1,1,1,0, };
+		return n;
+	}
+	vector<double> getThree() {
+		vector<double> n =
+		{ 0,1,1,1,0,
+			0,0,0,1,0,
+			0,1,1,1,0,
+			0,0,0,1,0,
+			0,1,1,1,0, };
+		return n;
+	}
+	vector<double> getFour() {
+		vector<double> n =
+		{ 0,1,0,1,0,
+			0,1,0,1,0,
+			0,1,1,1,1,
+			0,0,0,1,0,
+			0,0,0,1,0, };
+		return n;
+	}
+	vector<double> getFive() {
+		vector<double> n =
+		{ 0,1,1,1,0,
+			0,1,0,0,0,
+			0,1,1,1,0,
+			0,0,0,1,0,
+			0,1,1,1,0, };
+		return n;
+	}
+	vector<double> getSix() {
+		vector<double> n =
+		{ 0,1,1,1,0,
+			0,1,0,0,0,
+			0,1,1,1,0,
+			0,1,0,1,0,
+			0,1,1,1,0, };
+		return n;
+	}
+	vector<double> getSeven() {
+		vector<double> n =
+		{ 0,1,1,1,0,
+			0,0,0,1,0,
+			0,0,1,0,0,
+			0,1,0,0,0,
+			0,1,0,0,0, };
+		return n;
+	}
+	vector<double> getEight() {
+		vector<double> n =
+		{ 0,1,1,1,0,
+			0,1,0,1,0,
+			0,1,1,1,0,
+			0,1,0,1,0,
+			0,1,1,1,0, };
+		return n;
+	}
+	vector<double> getNine() {
+		vector<double> n =
+		{ 0,1,1,1,0,
+			0,1,0,1,0,
+			0,1,1,1,0,
+			0,0,0,1,0,
+			0,0,0,1,0, };
 		return n;
 	}
 }
@@ -149,18 +240,98 @@ void printConf(Vector& x) {
 	cout << "~~ (" << best << ") " << " conf: " << bestVal;
 }
 
-void drTest() {
+void reccurent_drTest() {
 
 
 	NeuralNetwork network;
+	ifstream is("testFile");
 
-	network.push_back(new LSTM(5, 25));
-	network.push_back(new FeedForward(25, 25));
-	network.push_back(new GRU(25, 10));
-	network.push_back(new FeedForward(10, 10));
+	network.push_back(new GRU(5, 15));
+	network.push_back(new LSTM(15, 25));
+	network.push_back(new FeedForward(25, 10));
+	network.read(is);
 
-	//	network.push_back(new RecurrentUnit(10, 10));
+	int train = 1;
+	while (train > 0) {
+		cout.precision(1);
+		cout << " testing 0 " << endl;
+		Vector& t0 = network.predict(get_recurrent_Zero());
+		printConf(t0);
+		cout << endl << " testing 1 " << endl;
+		Vector& t1 = network.predict(get_recurrent_One());
+		printConf(t1);
 
+		cout << endl << " testing 2 " << endl;
+		Vector& t2 = network.predict(get_recurrent_Two());
+		printConf(t2);
+
+		cout << endl << " testing 3 " << endl;
+		Vector& t3 = network.predict(get_recurrent_Three());
+		printConf(t3);
+
+		cout << endl << " testing 4 " << endl;
+		Vector& t4 = network.predict(get_recurrent_Four());
+		printConf(t4);
+
+		cout << endl << " testing 5 " << endl;
+		Vector& t5 = network.predict(get_recurrent_Five());
+		printConf(t5);
+
+		cout << endl << " testing 6 " << endl;
+		Vector& t6 = network.predict(get_recurrent_Six());
+		printConf(t6);
+
+		cout << endl << " testing 7 " << endl;
+		Vector& t7 = network.predict(get_recurrent_Seven());
+		printConf(t7);
+
+		cout << endl << " testing 8 " << endl;
+		Vector& t8 = network.predict(get_recurrent_Eight());
+		printConf(t8);
+
+		cout << endl << " testing 9" << endl;
+		Vector& t9 = network.predict(get_recurrent_Nine());
+		printConf(t9);
+
+		cout << endl;
+
+		cout << " input training iterations " << endl;
+		cin >> train;
+		for (int i = 0; i < train; ++i) {
+			network.train(get_recurrent_Zero(), vector<double> {1, 0, 0, 0, 0, 0, 0, 0, 0, 0});
+			network.train(get_recurrent_One(), vector<double>  {0, 1, 0, 0, 0, 0, 0, 0, 0, 0});
+			network.train(get_recurrent_Two(), vector<double>  {0, 0, 1, 0, 0, 0, 0, 0, 0, 0});
+			network.train(get_recurrent_Three(), vector<double>{0, 0, 0, 1, 0, 0, 0, 0, 0, 0});
+			network.train(get_recurrent_Four(), vector<double> {0, 0, 0, 0, 1, 0, 0, 0, 0, 0});
+			network.train(get_recurrent_Five(), vector<double> {0, 0, 0, 0, 0, 1, 0, 0, 0, 0});
+			network.train(get_recurrent_Six(), vector<double>  {0, 0, 0, 0, 0, 0, 1, 0, 0, 0});
+			network.train(get_recurrent_Seven(), vector<double>{0, 0, 0, 0, 0, 0, 0, 1, 0, 0});
+			network.train(get_recurrent_Eight(), vector<double>{0, 0, 0, 0, 0, 0, 0, 0, 1, 0});
+			network.train(get_recurrent_Nine(), vector<double> {0, 0, 0, 0, 0, 0, 0, 0, 0, 1});
+		}
+	}
+
+	ofstream os("testFile");
+	network.write(os);
+	os.close();
+}
+void conv_drTest() {
+
+
+	NeuralNetwork network = NeuralNetwork();
+
+	//network.push_back(new FeedForward(25, 15));
+	//network.push_back(new FeedForward(15, 10));
+
+	ifstream is("t_file");
+	if (is.is_open()) {
+		cout << " file sucessfully open" << endl;
+	}
+	else {
+		cout << "file open fail " << endl;
+	}
+	network.read(is);
+	is.close();
 
 	int train = 1;
 	while (train > 0) {
@@ -221,10 +392,15 @@ void drTest() {
 			network.train(getNine(), vector<double> {0, 0, 0, 0, 0, 0, 0, 0, 0, 1});
 		}
 	}
-}
 
-int main() {
-	drTest();
+	ofstream os("t_file");
+	if (os.is_open()) {
+		cout << " open t_file " << endl;
+	}
+	network.write(os);
+	os.close();
+}
+void XORtest() {
 	//initialize training set 
 	Vector i1(std::vector<double> {0, 0});
 	Vector i2(std::vector<double> {1, 1});
@@ -242,24 +418,31 @@ int main() {
 
 	int train = 1;
 	while (train > 0) {
-	
-	cout << " testing 1, 1 " << endl;
-	network.predict(i1).print();
-	cout << endl << " testing 0, 0 " << endl;
-	network.predict(i2).print();
-	cout << endl << " testing 1, 0 " << endl;
-	network.predict(i3).print();
-	cout << endl << " testing 0, 1 " << endl;
-	network.predict(i4).print();
-	cout << endl;
 
-	cout << " input training iterations " << endl;
-	cin >> train;
-	for (int i = 0; i < train; ++i) {
-		network.train(i1, o1);
-		network.train(i2, o2);
-		network.train(i3, o3);
-		network.train(i4, o4);
+		cout << " testing 1, 1 " << endl;
+		network.predict(i1).print();
+		cout << endl << " testing 0, 0 " << endl;
+		network.predict(i2).print();
+		cout << endl << " testing 1, 0 " << endl;
+		network.predict(i3).print();
+		cout << endl << " testing 0, 1 " << endl;
+		network.predict(i4).print();
+		cout << endl;
+
+		cout << " input training iterations " << endl;
+		cin >> train;
+		for (int i = 0; i < train; ++i) {
+			network.train(i1, o1);
+			network.train(i2, o2);
+			network.train(i3, o3);
+			network.train(i4, o4);
+		}
 	}
-	}
+}
+int main() {
+	//conv_drTest();
+	reccurent_drTest();
+
+	
+	
 }

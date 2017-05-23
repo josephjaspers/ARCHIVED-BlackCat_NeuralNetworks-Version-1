@@ -148,8 +148,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CNN.h" />
     <ClInclude Include="FeedForward.h" />
     <ClInclude Include="GRU.h" />
+    <ClInclude Include="Header.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="LSTM.h" />
     <ClInclude Include="NeuralNetwork.h" />
@@ -159,10 +161,12 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CNN.cpp" />
     <ClCompile Include="FeedForward.cpp" />
     <ClCompile Include="GRU.cpp" />
     <ClCompile Include="LSTM.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="NeuralNetwork.cpp" />
     <ClCompile Include="RecurrentUnit.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

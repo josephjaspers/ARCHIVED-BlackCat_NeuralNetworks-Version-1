@@ -8,11 +8,11 @@ class GRU : public Layer {
 	nonLinearityFunct z_g; //input gate nonlinearity function 
 
 	Vector c;
-	Vector dc;
-
 	Vector x;
 	Vector f;
 	Vector z;
+
+	Vector dc;
 
 	Vector bz;
 	Vector dz;
@@ -50,9 +50,20 @@ public:
 	Vector backwardPropagation(const Vector& dy);
 	Vector backwardPropagation_ThroughTime(const Vector& dy);
 
+	void set_ForgetGate_Sigmoid();
+	void set_ForgetGate_Tanh();
+
+	void set_WriteGate_Sigmoid();
+	void set_WriteGate_Tanh();
+
 	void clearBPStorage();
 	void clearGradients();
 	void updateGradients();
+
+
+	static GRU* read(std::ifstream& is);
+	void write(std::ofstream& os);
+	void writeClass(std::ofstream& os);
 };
 #endif
 

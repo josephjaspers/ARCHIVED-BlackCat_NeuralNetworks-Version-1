@@ -45,6 +45,12 @@
     <ClInclude Include="LSTM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CNN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -63,6 +69,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="LSTM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NeuralNetwork.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CNN.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

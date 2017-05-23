@@ -28,6 +28,10 @@ public:
 	void clearBPStorage();
 	void clearGradients();
 	void updateGradients();
+
+	static RecurrentUnit* read(std::ifstream& is);
+	void write(std::ofstream& os);
+	void writeClass(std::ofstream& os);
 };
 #endif
 
