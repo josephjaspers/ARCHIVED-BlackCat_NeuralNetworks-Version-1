@@ -170,6 +170,7 @@ void NeuralNetwork::writeClass(std::ofstream & os)
 NeuralNetwork & NeuralNetwork::read(std::ifstream & is)
 {
 	if (input) {
+		size = 0; //reset 
 		delete input;
 		input = nullptr;
 		output = nullptr;

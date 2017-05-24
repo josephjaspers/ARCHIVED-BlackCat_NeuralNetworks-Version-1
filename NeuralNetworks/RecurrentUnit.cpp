@@ -23,6 +23,7 @@ RecurrentUnit::RecurrentUnit(int inputs, int outputs) : Layer(inputs, outputs)
 	w_gradientStorage = Matrix(outputs, inputs);
 	r_gradientStorage = Matrix(outputs, outputs);
 
+	x = Vector(inputs);
 	c = Vector(outputs);
 	b = Vector(outputs);
 	w = Matrix(outputs, inputs);
@@ -42,11 +43,13 @@ Vector RecurrentUnit::forwardPropagation_express(const Vector & x)
 		return c;
 }
 
-Vector RecurrentUnit::forwardPropagation(const Vector & x)
+Vector RecurrentUnit::forwardPropagation(const Vector & input)
 {
 	//store the current activations and cellstate
 	bpX.push_back(x);
 	bpC.push_back(c);
+	//set x to inputs
+	x = input;
 	//set the cellstate (c is the output)
 	c = g(w * x + r * c + b);
 	//continue backprop
@@ -59,13 +62,11 @@ Vector RecurrentUnit::forwardPropagation(const Vector & x)
 Vector RecurrentUnit::backwardPropagation(const Vector & dy)
 {
 	//Store gradients 
-	w_gradientStorage -= (dy * Xt());
+	w_gradientStorage -= (dy * x);
 	b_gradientStorage -= dy;
 	r_gradientStorage -= dy * c; 
 	//get input error
-	Vector& dx = (w.T() * dy) & g.d(Xt());
-	//update backprop storage
-	bpX.pop_back();
+	Vector& dx = (w.T() * dy) & g.d(x);
 	//continue backpropagation
 	if (prev != nullptr) {
 		return prev->backwardPropagation(dx);
@@ -127,6 +128,7 @@ RecurrentUnit* RecurrentUnit::read(std::ifstream & is)
 
 	RecurrentUnit* ru = new RecurrentUnit(inputs, outputs);
 
+	ru->x = Vector::read(is);
 	ru->b = Vector::read(is);
 	ru->c = Vector::read(is);
 	ru->w = Matrix::read(is);
@@ -142,6 +144,7 @@ void RecurrentUnit::write(std::ofstream & os)
 	os << NUMB_INPUTS << ' ';
 	os << NUMB_OUTPUTS << ' ';
 
+	x.write(os);
 	b.write(os);
 	c.write(os);
 	w.write(os);
@@ -152,5 +155,5 @@ void RecurrentUnit::write(std::ofstream & os)
 
 void RecurrentUnit::writeClass(std::ofstream & os)
 {
-	os << 4 << ' ';
+	os << 3 << ' ';
 }

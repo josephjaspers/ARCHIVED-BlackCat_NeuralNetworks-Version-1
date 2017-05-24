@@ -241,15 +241,14 @@ void printConf(Vector& x) {
 }
 
 void reccurent_drTest() {
-
-
 	NeuralNetwork network;
 	ifstream is("testFile");
 
-	network.push_back(new GRU(5, 15));
-	network.push_back(new LSTM(15, 25));
-	network.push_back(new FeedForward(25, 10));
-	network.read(is);
+	network.push_back(new LSTM(5, 10));
+	network.push_back(new GRU(10, 15));
+	network.push_back(new RecurrentUnit(15, 20));
+	network.push_back(new FeedForward(20, 10));
+	//network.read(is);
 
 	int train = 1;
 	while (train > 0) {
@@ -311,9 +310,9 @@ void reccurent_drTest() {
 		}
 	}
 
-	ofstream os("testFile");
-	network.write(os);
-	os.close();
+	//ofstream os("testFile");
+	//network.write(os);
+	//os.close();
 }
 void conv_drTest() {
 

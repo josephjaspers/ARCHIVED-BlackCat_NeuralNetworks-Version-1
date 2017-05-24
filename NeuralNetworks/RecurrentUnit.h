@@ -4,6 +4,7 @@
 
 class RecurrentUnit : public Layer {
 
+	Vector x;
 	Vector b;
 	Vector c;
 	Matrix w;
