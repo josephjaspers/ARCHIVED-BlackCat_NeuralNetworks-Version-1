@@ -45,10 +45,10 @@
     <ClInclude Include="LSTM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CNN.h">
+    <ClInclude Include="Header.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header.h">
+    <ClInclude Include="CNN.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

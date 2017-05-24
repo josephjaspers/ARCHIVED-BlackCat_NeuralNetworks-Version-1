@@ -1,69 +1,10 @@
 ﻿  CNN.cpp
 C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(347): warning C4018: '<': signed/unsigned mismatch
-CNN.cpp(101): warning C4018: '<': signed/unsigned mismatch
-CNN.cpp(102): warning C4018: '<': signed/unsigned mismatch
-  FeedForward.cpp
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(347): warning C4018: '<': signed/unsigned mismatch
-  Generating code
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(278): warning C4711: function 'double & __thiscall Vector::operator[](int)' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(187): warning C4711: function 'int __thiscall Vector::length(void)const ' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\neuralnetwork.cpp(85): warning C4715: 'NeuralNetwork::backwardPropagation_ThroughTime': not all control paths return a value
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\neuralnetwork.cpp(38): warning C4715: 'NeuralNetwork::forwardPropagation_express': not all control paths return a value
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(226): warning C4711: function '__thiscall Vector::Vector(unsigned int)' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(228): warning C4711: function 'double & __thiscall Vector::operator[](int)' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonlinearityfunction.h(101): warning C4715: 'nonLinearityFunct::nonLin': not all control paths return a value
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(290): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(double)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(290): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char const *)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonlinearityfunction.h(92): warning C4715: 'nonLinearityFunct::d': not all control paths return a value
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonlinearityfunction.h(73): warning C4715: 'nonLinearityFunct::operator()': not all control paths return a value
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(73): warning C4711: function 'int __thiscall Vector::length(void)const ' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(313): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(bool)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(313): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(315): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char const *)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(318): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(int)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(318): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(320): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(double)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(320): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(315): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(class std::basic_ostream<char,struct std::char_traits<char> > & (__cdecl*)(class std::basic_ostream<char,struct std::char_traits<char> > &))': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(503): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(bool)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(503): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(507): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(int)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(508): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(509): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(int)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(510): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(511): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(int)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(512): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(516): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(double)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(516): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char)': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(514): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(515): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(325): warning C4710: 'void __thiscall Vector::chkBounds(int)const ': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(57): warning C4710: 'void __thiscall Vector::chkBounds(int)const ': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(178): warning C4710: 'void __thiscall Vector::chkBounds(class Vector const &)const ': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(180): warning C4711: function 'int __thiscall Vector::length(void)const ' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(160): warning C4710: 'void __thiscall Vector::chkBounds(class Vector const &)const ': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(162): warning C4711: function 'int __thiscall Vector::length(void)const ' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(143): warning C4711: function '__thiscall Vector::Vector(unsigned int)' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(145): warning C4711: function 'double & __thiscall Vector::operator[](int)' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(133): warning C4711: function '__thiscall Vector::Vector(unsigned int)' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(135): warning C4711: function 'double & __thiscall Vector::operator[](int)' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(123): warning C4711: function '__thiscall Vector::Vector(unsigned int)' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(125): warning C4711: function 'double & __thiscall Vector::operator[](int)' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(142): warning C4710: 'void __thiscall Matrix::chkBounds(int,int)const ': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(329): warning C4710: 'void __thiscall Matrix::chkBounds(class Matrix const &)const ': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(331): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(332): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(318): warning C4710: 'void __thiscall Matrix::chkBounds(class Matrix const &)const ': function not inlined
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(320): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(321): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(402): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(402): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(402): warning C4711: function '__thiscall Matrix::Matrix(unsigned int,unsigned int)' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(404): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(405): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(236): warning C4711: function '__thiscall Matrix::Matrix(unsigned int,unsigned int)' selected for automatic inline expansion
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\neuralnetwork.cpp(73): warning C4715: 'NeuralNetwork::backwardPropagation': not all control paths return a value
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\neuralnetwork.cpp(51): warning C4715: 'NeuralNetwork::forwardPropagation': not all control paths return a value
-  Finished generating code
-  NeuralNetworks.vcxproj -> C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\Release\NeuralNetworks.exe
-  NeuralNetworks.vcxproj -> C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\Release\NeuralNetworks.pdb (Full PDB)
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\CNN.h(70): error C2065: 'retur': undeclared identifier
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\CNN.h(70): error C2143: syntax error: missing ';' before '}'
+CNN.cpp(28): warning C4018: '<': signed/unsigned mismatch
+CNN.cpp(32): warning C4018: '<': signed/unsigned mismatch
+CNN.cpp(47): warning C4018: '<': signed/unsigned mismatch
+CNN.cpp(49): warning C4018: '<': signed/unsigned mismatch
+CNN.cpp(50): warning C4018: '<': signed/unsigned mismatch
+CNN.cpp(51): warning C4018: '<': signed/unsigned mismatch

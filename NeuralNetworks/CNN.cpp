@@ -4,12 +4,14 @@
 #include "CNN.h"
 
 
-CNN::CNN(unsigned input_length, unsigned input_width, unsigned numb_filters, unsigned filter_length) :
+Convolution::Convolution(unsigned input_length, unsigned input_width, unsigned numb_filters, unsigned filter_length) :
 	LENGTH(input_length),
 	WIDTH(input_width),
 	STRIDE(1),
+	DEPTH(1),
 	FEATURE_MAP_LENGTH(filter_length),
 	FEATURE_MAP_WIDTH(filter_length),
+	NUMB_FEATURES(numb_filters),
 	POOLED_LENGTH((input_length - filter_length / STRIDE) + 1),
 	POOLED_WIDTH((input_width - filter_length / STRIDE) + 1),
 	Layer(input_length, POOLED_LENGTH * POOLED_WIDTH) {
@@ -19,91 +21,66 @@ CNN::CNN(unsigned input_length, unsigned input_width, unsigned numb_filters, uns
 	throw std::out_of_range("error");
 	}
 
-	f = Matrix(filter_length, filter_length);
-	x = Matrix(input_length, input_width);
-}
+	w = std::vector<std::vector<Matrix>>(NUMB_FEATURES); 
+	b = std::vector<std::vector<Matrix>>(NUMB_FEATURES);
 
-Vector CNN::forwardPropagation_express(const Vector &input)
-{
-	x = vec_toMatrix(input, LENGTH, WIDTH); //convert the vector to a matrix
-	Matrix& pooled = convolution(x, f);
-	
-	if (next != nullptr) {
-		next->forwardPropagation_express(mat_toVector(x)); //flatten the matrix send to next layer
-	}
-	else return (mat_toVector(x));
-}
+	//initialize bias and w
+	for (int f = 0; f < NUMB_FEATURES; ++f) {
+		std::vector<Matrix> w_depth;
+		std::vector<Matrix> b_depth;
 
-Vector CNN::forwardPropagation(const Vector & input)
-{
-	x = vec_toMatrix(input, LENGTH, WIDTH); //convert the vector to a matrix
-	Matrix& pooled = convolution(x, f);
-
-	bpX.push_back(x); //store the activations 
-	//bpX_indexes.push_back(indexes);
-
-	if (next != nullptr) {
-		next->forwardPropagation_express(mat_toVector(x));
-	}
-	else return (mat_toVector(x));
-}
-
-Vector CNN::backwardPropagation(const Vector & dy)
-{
-	//dy at index 
-	//w_gradientStorage -= dy * a;
-	//create a Matrix[] set delta at apropriate indexes
-
-	//for (int i = 0; i; i < matrix[].length; ++i) {
-	//f_gradientStorage -= matrix_delta[i] * a; //need to store activations ?? don't actually need to store the big x
-	//d_gradientSor
-	//}
-	//
-}
-
-Vector CNN::backwardPropagation_ThroughTime(const Vector & dy)
-{
-return Vector();
-}
-
-void CNN::clearBPStorage()
-{
-}
-
-void CNN::clearGradients()
-{
-}
-
-void CNN::updateGradients()
-{
-}
-
-Matrix CNN::convolution(const Matrix & img, const Matrix & feature)
-{
-	std::vector<Matrix> convolved_imgs; 
-
-	for (int x = 0; x < img.length(); ++x) {
-		for (int y = 0; y < img.width(); ++y) {
-			Matrix& conv = img.sub_Matrix(x, y, FEATURE_MAP_LENGTH, FEATURE_MAP_WIDTH);
-			Matrix& filtered = feature & conv + b; 
-			convolved_imgs.push_back(filtered);
+		for (int d = 0; d < DEPTH; ++d) {
+			w_depth.push_back(Matrix(FEATURE_MAP_LENGTH, FEATURE_MAP_WIDTH));
+			b_depth.push_back(Matrix(FEATURE_MAP_LENGTH, FEATURE_MAP_WIDTH));
 		}
 	}
-	//apply relu on the convolved_imgs 
-	return maxPooling(convolved_imgs);
+}
+//does not support more than 1 channel currently
+Vector Convolution::forwardPropagation_express(const Vector &input)
+{
+	//((LENGTH - FEATURE_MAP_LENGTH / STRIDE) + 1) * NUMB_FEATURES;
+	std::vector<std::vector<Matrix>> feature_map_storage = std::vector<std::vector<Matrix>>(0);
+
+	std::vector<Matrix> img; //3d image (IE rgb)
+
+	//convolve around the image
+	for (int i = 0; i < NUMB_FEATURES; ++i) {			//For the number of filters
+		std::vector<Matrix> depth_storage(DEPTH);		//
+		for (int d = 0; d < DEPTH; ++d) {				//For each depth index
+			for (int x = 0; x < LENGTH; ++x) {			//For each length index
+				for (int y = 0; y < WIDTH; ++y) {		//For each width index 
+														//pointwise multiply filter and the img at given indexes
+					Matrix& a = w[i][d] & img[i].sub_Matrix(x, y, FEATURE_MAP_LENGTH, FEATURE_MAP_WIDTH);
+					depth_storage.push_back(a);
+				}
+			}
+		}
+		feature_map_storage.push_back(depth_storage);
+	}
 }
 
-Matrix CNN::maxPooling(std::vector<Matrix> convolved_mat)
+Vector Convolution::forwardPropagation(const Vector & input)
 {
-	//get the maximums 
-	Matrix pooled = Matrix(POOLED_LENGTH, POOLED_WIDTH);
 
-	int index = 0;
-	for (int x = 0; x < POOLED_LENGTH; ++x) {
-		for (int y = 0; y < POOLED_WIDTH; ++y) {
-			pooled[x][y] = max(convolved_mat[index]);
-			++index;
-		}
-	}
-	return pooled;
+}
+
+Vector Convolution::backwardPropagation(const Vector & dy)
+{
+
+}
+
+Vector Convolution::backwardPropagation_ThroughTime(const Vector & dy)
+{
+}
+
+void Convolution::clearBPStorage()
+{
+}
+
+void Convolution::clearGradients()
+{
+}
+
+void Convolution::updateGradients()
+{
 }
