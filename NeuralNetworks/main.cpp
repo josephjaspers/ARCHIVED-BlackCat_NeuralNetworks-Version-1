@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "FeedForward.h"
 #include "GRU.h"
+#include "CNN.h"
 #include "RecurrentUnit.h"
 #include "NeuralNetwork.h"
 #include "LSTM.h"
@@ -319,8 +320,14 @@ void conv_drTest() {
 
 	NeuralNetwork network = NeuralNetwork();
 
-	//network.push_back(new FeedForward(25, 15));
-	//network.push_back(new FeedForward(15, 10));
+	//network.push_back(new CNN(5, 5, 3, 3, 1));
+
+	//network.push_back(new Filter(5, 5, 1, 1));
+	//network.push_back(new FeedForward(25, 10));
+
+	network.push_back(new Filter(5, 5, 2, 1));
+	network.push_back(new FeedForward(16, 10));
+
 
 	ifstream is("t_file");
 	if (is.is_open()) {
@@ -329,7 +336,7 @@ void conv_drTest() {
 	else {
 		cout << "file open fail " << endl;
 	}
-	network.read(is);
+	//network.read(is);
 	is.close();
 
 	int train = 1;
@@ -439,8 +446,8 @@ void XORtest() {
 	}
 }
 int main() {
-	//conv_drTest();
-	reccurent_drTest();
+	conv_drTest();
+	//reccurent_drTest();
 
 	
 	

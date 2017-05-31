@@ -22,15 +22,16 @@ FeedForward::FeedForward(int inputs, int outputs) : Layer(inputs, outputs)
 
 Vector FeedForward::forwardPropagation_express(const Vector & x)
 {
-	if (next != nullptr)
+	if (next != nullptr) 
 		return next->forwardPropagation_express(g(w * x + b));
-	else
+	else 
 		return g(w * x + b);
 }
 
 Vector FeedForward::forwardPropagation(const Vector & x)
 {
 	bpX.push_back(x); //store the inputs
+
 	if (next != nullptr)
 		return next->forwardPropagation(g(w * x + b));
 	else

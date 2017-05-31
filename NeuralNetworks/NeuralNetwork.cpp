@@ -27,7 +27,7 @@ NeuralNetwork::~NeuralNetwork()
 
 Vector NeuralNetwork::forwardPropagation_express(const Vector & x)
 {
-	Vector& a = input->forwardPropagation_express(x);
+	Vector a = input->forwardPropagation_express(x);
 
 	if (next != nullptr) {
 		next->forwardPropagation_express(a);
@@ -39,15 +39,15 @@ Vector NeuralNetwork::forwardPropagation_express(const Vector & x)
 
 Vector NeuralNetwork::forwardPropagation(const Vector & x)
 {
-	Vector& output = input->forwardPropagation(x);
+	Vector output = input->forwardPropagation(x);
 	bpO.push_back(output);
 
-	if (next != nullptr) {
-		next->forwardPropagation(output);
-	}
-	else {
+	//if (next != nullptr) {
+	//	next->forwardPropagation(output);
+	//}
+	//else {
 		return output;
-	}
+	//}
 }
 
 double sum(Vector& v) {
@@ -193,6 +193,7 @@ Layer * NeuralNetwork::readLayer(std::ifstream & is)
 	is >> classType;
 
 	switch (classType) {
+	case -1: std::cout << " reading FF_norec" << std::endl; return FF_norec::read(is);
 	case 0: std::cout << " reading FF" << std::endl; return FeedForward::read(is);
 	case 1: std::cout << " reading GRU" << std::endl; return GRU::read(is);
 	case 2: std::cout << " reading LSTM" << std::endl;  return LSTM::read(is);

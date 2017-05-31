@@ -88,10 +88,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Debug\Debug\Matrix.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -117,6 +119,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix</AdditionalIncludeDirectories>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -149,7 +152,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CNN.h" />
+    <ClInclude Include="CNN_Layer.h" />
     <ClInclude Include="FeedForward.h" />
+    <ClInclude Include="FF_norec.h" />
+    <ClInclude Include="Filter.h" />
     <ClInclude Include="GRU.h" />
     <ClInclude Include="Header.h" />
     <ClInclude Include="Layer.h" />
@@ -163,6 +169,8 @@
   <ItemGroup>
     <ClCompile Include="CNN.cpp" />
     <ClCompile Include="FeedForward.cpp" />
+    <ClCompile Include="FF_norec.cpp" />
+    <ClCompile Include="Filter.cpp" />
     <ClCompile Include="GRU.cpp" />
     <ClCompile Include="LSTM.cpp" />
     <ClCompile Include="main.cpp" />

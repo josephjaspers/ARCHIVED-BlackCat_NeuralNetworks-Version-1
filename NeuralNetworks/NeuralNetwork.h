@@ -6,6 +6,7 @@
 #include "Layer.h"
 //include all the layers
 #include "FeedForward.h"
+#include "FF_norec.h"
 #include "RecurrentUnit.h"
 #include "GRU.h"
 #include "LSTM.h"
@@ -25,6 +26,12 @@ public:
 
 	NeuralNetwork();
 	~NeuralNetwork();
+
+	void setLearningRate(double lr) {
+		if (input != nullptr) {
+			input->setLearningRate_link(lr);
+		}
+	}
 
 	Vector forwardPropagation_express(const Vector& input);
 	Vector forwardPropagation(const Vector& input);
