@@ -1,32 +1,32 @@
 #pragma once
-#ifndef ConvolutionalNeural_Layer_h
-#define ConvolutionalNeural_Layer_h
-#include "CNN_Layer.h"
+#ifndef CNN_jas_h
+#define CNN_jas_h
+#include "Layer.h"
 #include "Filter.h"
-
 class CNN : public Layer {
-	//CNN Layer --> seperate by channels --> seperate by filters 
+	//CNN Layer --> seperate by channels --> seperate by features 
 
 	const unsigned LENGTH;					//Input picture length dimension	|| version only accepts square images, length always equals width
 	const unsigned WIDTH;					//Input picture width dimension		|| version only accepts square images, width always equals length
-	const unsigned DEPTH;		
+
+	const unsigned DEPTH;
+	const unsigned NUMB_FEATURES;
+
 	const unsigned STRIDE;					//stride distance
-	const unsigned NUMB_FILTERS;
+
 	const unsigned FEATURE_LENGTH;		//feature map length dimension
 	const unsigned FEATURE_WIDTH;		//feature map width dimension
 
 	const unsigned POOLED_LENGTH;			//length dimension post pooling
 	const unsigned POOLED_WIDTH;			//width dimension post pooling
 
-	std::vector<Filter> features;
-
-	std::vector<Vector> bpX;
-	Vector Xt();
+	Matrix& Xt();
+	std::vector<Matrix> bpX;
+	std::vector<Filter> filters; 
 
 public:
-	CNN(unsigned input_length, unsigned input_width, unsigned n_filters, unsigned filter_length, unsigned stride);
-
-	Vector combine(std::vector<Vector>& stack);
+	CNN(unsigned input_length, unsigned input_width, unsigned numb_filters, unsigned filter_length, unsigned stride);
+	double findMax(Matrix & img, int & x_store, int & y_store);
 
 	//@Override methods
 	Vector forwardPropagation_express(const Vector& x);						//forward propagation [Express does not store activations for BPPT]
@@ -38,12 +38,12 @@ public:
 	void clearGradients();
 	void updateGradients();
 
+	void printFilterWeights();
+
 	//not supported yet
 	void write(std::ofstream& os) {};
 	void writeClass(std::ofstream& os) {};
 	static CNN read(std::ifstream& is) {};
 };
-
-
 
 #endif

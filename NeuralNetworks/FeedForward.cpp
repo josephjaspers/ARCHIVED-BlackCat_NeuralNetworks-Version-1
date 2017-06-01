@@ -30,6 +30,7 @@ Vector FeedForward::forwardPropagation_express(const Vector & x)
 
 Vector FeedForward::forwardPropagation(const Vector & x)
 {
+
 	bpX.push_back(x); //store the inputs
 
 	if (next != nullptr)

@@ -1,2 +1,29 @@
-﻿  NeuralNetworks.vcxproj -> C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\Debug\NeuralNetworks.exe
+﻿  Filter.cpp
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.h(71): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.h(77): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrices.h(348): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrices.h(515): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrices.h(526): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\filter.cpp(42): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\filter.cpp(42): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\filter.cpp(67): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\filter.cpp(67): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\filter.cpp(247): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\filter.cpp(263): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\filter.cpp(264): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\filter.cpp(290): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\filter.cpp(291): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\filter.cpp(322): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\filter.cpp(323): warning C4018: '<': signed/unsigned mismatch
+  FeedForward.cpp
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.h(71): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.h(77): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrices.h(348): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrices.h(515): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrices.h(526): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonlinearityfunction.h(90): warning C4715: 'nonLinearityFunct::operator()': not all control paths return a value
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonlinearityfunction.h(109): warning C4715: 'nonLinearityFunct::d': not all control paths return a value
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonlinearityfunction.h(200): warning C4715: 'nonLinearityFunct::operator()': not all control paths return a value
+  NeuralNetworks.vcxproj -> C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\Debug\NeuralNetworks.exe
   NeuralNetworks.vcxproj -> C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\Debug\NeuralNetworks.pdb (Full PDB)

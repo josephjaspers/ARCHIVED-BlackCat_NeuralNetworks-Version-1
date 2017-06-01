@@ -320,13 +320,14 @@ void conv_drTest() {
 
 	NeuralNetwork network = NeuralNetwork();
 
-	//network.push_back(new CNN(5, 5, 3, 3, 1));
+	//network.push_back(new CNN(5, 5, 3, 2, 1));
+	//network.push_back(new FeedForward(12, 10));
 
-	//network.push_back(new Filter(5, 5, 1, 1));
-	//network.push_back(new FeedForward(25, 10));
+	network.push_back(new Filter(5, 5, 3, 2, 1));
+	network.push_back(new FeedForward(48, 10));
 
-	network.push_back(new Filter(5, 5, 2, 1));
-	network.push_back(new FeedForward(16, 10));
+	//network.push_back(new Filter(5, 5, 2, 1));
+	//network.push_back(new FeedForward(16, 10));
 
 
 	ifstream is("t_file");
@@ -445,8 +446,9 @@ void XORtest() {
 		}
 	}
 }
+
 int main() {
-	conv_drTest();
+ conv_drTest();
 	//reccurent_drTest();
 
 	

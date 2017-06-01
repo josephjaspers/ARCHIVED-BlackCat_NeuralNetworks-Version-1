@@ -7,7 +7,7 @@ protected:
 	CNN_Layer* conv_next;
 	CNN_Layer* conv_prev;
 public:
-	virtual void link(CNN_Layer* l) {
+	virtual void conv_link(CNN_Layer* l) {
 		conv_next = l;
 		l->prev = this;
 	}
@@ -34,10 +34,10 @@ public:
 		return dy;
 	}
 
-	virtual Stack_Matrix forwardPropagation_express(const Stack_Matrix& x) = 0;
-	virtual Stack_Matrix forwardPropagation(const Stack_Matrix& x) = 0;
-	virtual Stack_Matrix backwardPropagation(const Stack_Matrix& dy) = 0;
-	virtual Stack_Matrix backwardPropagation_ThroughTime(const Stack_Matrix& dy) = 0;
+	virtual Matrix forwardPropagation_express(const Matrix& x, std::vector<Matrix>& outputs) = 0;
+	virtual Matrix forwardPropagation(const Matrix& x, std::vector<Matrix>& outputs) = 0;
+	virtual Matrix backwardPropagation(const Matrix& dy) = 0;
+	virtual Matrix backwardPropagation_ThroughTime(const Matrix& dy) = 0;
 
 	virtual void clearBPStorage() = 0;
 	virtual void clearGradients() = 0;
@@ -46,7 +46,6 @@ public:
 	//static CNN_Layer* read(std::ifstream& is);
 	virtual void write(std::ofstream& os) = 0;
 	virtual void writeClass(std::ofstream& os) = 0;
-
 };
 
 #endif

@@ -41,9 +41,9 @@ protected:
 
 	}				
 	typedef std::vector<Vector> bpStorage;				//type defination -- this format is used consistently to store the activations for backprop through time 
-	Layer* next;										//pointer to next layer in network --similair to LinkedList 
-	Layer* prev;										//pointer to previous layer in network --similair to LinkedList
-	double lr = .03;										//Learning Rate
+	Layer* next = nullptr;										//pointer to next layer in network --similair to LinkedList 
+	Layer* prev = nullptr;										//pointer to previous layer in network --similair to LinkedList
+	double lr = .3;										//Learning Rate
 	double mr = .01;									//Momentum Rate (currently not supported)
 	
 public:
