@@ -10,6 +10,7 @@
 #include "RecurrentUnit.h"
 #include "GRU.h"
 #include "LSTM.h"
+#include "CNN.h"
 
 class NeuralNetwork : public Layer {
 
