@@ -3,7 +3,6 @@
 #define Layer_h
 #include "stdafx.h"
 #include "Matrices.h"
-
 #include "nonLinearityFunction.h"
 #include <iostream>
 #include <fstream>

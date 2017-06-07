@@ -249,7 +249,6 @@ void reccurent_drTest() {
 	network.push_back(new GRU(10, 15));
 	network.push_back(new RecurrentUnit(15, 20));
 	network.push_back(new FeedForward(20, 10));
-	network.push_back(new FF_norec(10, 10));
 	//network.read(is);
 
 	int train = 1;
@@ -323,11 +322,11 @@ void conv_drTest() {
 
 	//network.push_back(new FeedForward(25, 320));
 	//network.push_back(new FeedForward(320, 10));
-	//network.push_back(new CNN(5, 5, 3, 2, 1));
-	//network.push_back(new FF_norec(80, 10));
+	network.push_back(new CNN(5, 5, 5, 2, 1));
+	network.push_back(new FF_norec(80, 10));
 
-	network.push_back(new Filter(5, 5, 2, 1));
-	network.push_back(new FeedForward(16, 10));
+	//network.push_back(new CNN(5, 5, 2, 1));
+	//network.push_back(new FeedForward(16, 10));
 
 
 	ifstream is("t_file");
@@ -448,8 +447,8 @@ void XORtest() {
 }
 
 int main() {
-	//conv_drTest();
-	reccurent_drTest();
+ conv_drTest();
+	//reccurent_drTest();
 
 	
 	
