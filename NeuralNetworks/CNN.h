@@ -1,4 +1,5 @@
 #pragma once
+/*
 #ifndef Filter_jas_h
 #define Filter_jas_h
 #include "Layer.h"
@@ -73,3 +74,5 @@ public:
 };
 
 #endif
+
+*/

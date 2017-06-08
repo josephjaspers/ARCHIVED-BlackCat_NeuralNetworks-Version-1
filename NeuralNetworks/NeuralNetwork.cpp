@@ -1,4 +1,5 @@
 #include "stdafx.h"
+
 #include "NeuralNetwork.h"
 
 void NeuralNetwork::push_back(Layer * l)

@@ -5,6 +5,7 @@
 #include "RecurrentUnit.h"
 #include "NeuralNetwork.h"
 #include "LSTM.h"
+#include <thread>
 using namespace std;
 
 
@@ -232,7 +233,7 @@ void printConf(Vector& x) {
 
 	int best = -1;
 	double bestVal = -1;
-	for (int i = 0; i < x.length(); ++i) {
+	for (int i = 0; i < x.size(); ++i) {
 		if (bestVal < x[i]) {
 			bestVal = x[i];
 			best = i;
@@ -246,9 +247,9 @@ void reccurent_drTest() {
 	ifstream is("testFile");
 
 	network.push_back(new LSTM(5, 10));
-	network.push_back(new GRU(10, 15));
-	network.push_back(new RecurrentUnit(15, 20));
-	network.push_back(new FeedForward(20, 10));
+	network.push_back(new GRU(10, 10));
+	//network.push_back(new RecurrentUnit(10, 10));
+	network.push_back(new FeedForward(10, 10));
 	//network.read(is);
 
 	int train = 1;
@@ -322,8 +323,9 @@ void conv_drTest() {
 
 	//network.push_back(new FeedForward(25, 320));
 	//network.push_back(new FeedForward(320, 10));
-	network.push_back(new CNN(5, 5, 5, 2, 1));
-	network.push_back(new FF_norec(80, 10));
+//	network.push_back(new CNN(5, 5, 5, 2, 1));
+	network.push_back(new FF_norec(25, 25));
+	network.push_back(new FF_norec(25, 10));
 
 	//network.push_back(new CNN(5, 5, 2, 1));
 	//network.push_back(new FeedForward(16, 10));
@@ -418,9 +420,8 @@ void XORtest() {
 	Vector o4(std::vector<double> {0});
 	//initialize network
 	NeuralNetwork network;
-	network.push_back(new FeedForward(2, 12)); //generate a feedforward layer with 2 inputs 5 outputs
-	network.push_back(new FeedForward(12, 10));
-	network.push_back(new FeedForward(10, 1)); //generate a feedforwad layer with 5 inputs 1 outputs 
+	network.push_back(new FF_norec(2, 4)); //generate a feedforward layer with 2 inputs 5 outputs
+	network.push_back(new FF_norec(4, 1)); //generate a feedforwad layer with 5 inputs 1 outputs 
 
 	int train = 1;
 	while (train > 0) {
@@ -447,8 +448,9 @@ void XORtest() {
 }
 
 int main() {
- conv_drTest();
-	//reccurent_drTest();
+	//XORtest();
+	//conv_drTest();
+	reccurent_drTest();
 
 	
 	

@@ -1,23 +1,36 @@
-﻿  CNN.cpp
-CNN.cpp(22): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-CNN.cpp(22): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
-CNN.cpp(24): warning C4018: '<': signed/unsigned mismatch
-CNN.cpp(51): warning C4018: '<': signed/unsigned mismatch
-CNN.cpp(67): warning C4018: '<': signed/unsigned mismatch
-CNN.cpp(87): warning C4018: '<': signed/unsigned mismatch
-CNN.cpp(102): warning C4018: '<': signed/unsigned mismatch
-CNN.cpp(110): warning C4018: '<': signed/unsigned mismatch
-CNN.cpp(120): warning C4018: '<': signed/unsigned mismatch
-  Filter.cpp
-Filter.cpp(42): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-Filter.cpp(42): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
-Filter.cpp(67): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-Filter.cpp(67): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
+﻿  FF_norec.cpp
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(146): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(148): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(196): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  FeedForward.cpp
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(146): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(148): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(196): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  GRU.cpp
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(146): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(148): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(196): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  LSTM.cpp
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(146): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(148): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(196): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  NeuralNetwork.cpp
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(146): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(148): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(196): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+NeuralNetwork.cpp(139): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  RecurrentUnit.cpp
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(146): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(148): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(196): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  main.cpp
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(146): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(148): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\jas_matrices\jas_matrices\Matrix_Operations.h(196): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
   Generating code
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonlinearityfunction.h(200): warning C4715: 'nonLinearityFunct::operator()': not all control paths return a value
-  31 of 717 functions ( 4.3%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    13 functions had inline decision re-evaluated but remain unchanged
+  19 of 574 functions ( 3.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    35 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   NeuralNetworks.vcxproj -> C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\x64\Release\NeuralNetworks.exe
   NeuralNetworks.vcxproj -> C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\x64\Release\NeuralNetworks.pdb (Full PDB)
