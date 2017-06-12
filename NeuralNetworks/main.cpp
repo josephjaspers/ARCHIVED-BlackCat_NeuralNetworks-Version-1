@@ -255,42 +255,42 @@ void reccurent_drTest() {
 	while (train > 0) {
 		cout.precision(1);
 		cout << " testing 0 " << endl;
-		Vector& t0 = network.predict(get_recurrent_Zero());
+		Vector t0 = network.predict(get_recurrent_Zero());
 		printConf(t0);
 		cout << endl << " testing 1 " << endl;
-		Vector& t1 = network.predict(get_recurrent_One());
+		Vector t1 = network.predict(get_recurrent_One());
 		printConf(t1);
 
 		cout << endl << " testing 2 " << endl;
-		Vector& t2 = network.predict(get_recurrent_Two());
+		Vector t2 = network.predict(get_recurrent_Two());
 		printConf(t2);
 
 		cout << endl << " testing 3 " << endl;
-		Vector& t3 = network.predict(get_recurrent_Three());
+		Vector t3 = network.predict(get_recurrent_Three());
 		printConf(t3);
 
 		cout << endl << " testing 4 " << endl;
-		Vector& t4 = network.predict(get_recurrent_Four());
+		Vector t4 = network.predict(get_recurrent_Four());
 		printConf(t4);
 
 		cout << endl << " testing 5 " << endl;
-		Vector& t5 = network.predict(get_recurrent_Five());
+		Vector t5 = network.predict(get_recurrent_Five());
 		printConf(t5);
 
 		cout << endl << " testing 6 " << endl;
-		Vector& t6 = network.predict(get_recurrent_Six());
+		Vector t6 = network.predict(get_recurrent_Six());
 		printConf(t6);
 
 		cout << endl << " testing 7 " << endl;
-		Vector& t7 = network.predict(get_recurrent_Seven());
+		Vector t7 = network.predict(get_recurrent_Seven());
 		printConf(t7);
 
 		cout << endl << " testing 8 " << endl;
-		Vector& t8 = network.predict(get_recurrent_Eight());
+		Vector t8 = network.predict(get_recurrent_Eight());
 		printConf(t8);
 
 		cout << endl << " testing 9" << endl;
-		Vector& t9 = network.predict(get_recurrent_Nine());
+		Vector t9 = network.predict(get_recurrent_Nine());
 		printConf(t9);
 
 		cout << endl;
@@ -322,7 +322,7 @@ void conv_drTest() {
 
 	//network.push_back(new FeedForward(25, 320));
 	//network.push_back(new FeedForward(320, 10));
-	network.push_back(new CNN(5, 5, 5, 2, 1));
+	network.push_back(new FF_norec(25, 80));
 	network.push_back(new FF_norec(80, 10));
 
 	//network.push_back(new CNN(5, 5, 2, 1));
@@ -343,42 +343,42 @@ void conv_drTest() {
 	while (train > 0) {
 		cout.precision(1);
 		cout << " testing 0 " << endl;
-		Vector& t0 = network.predict(getZero());
+		Vector t0 = network.predict(getZero());
 		printConf(t0);
 		cout << endl << " testing 1 " << endl;
-		Vector& t1 = network.predict(getOne());
+		Vector t1 = network.predict(getOne());
 		printConf(t1);
 
 		cout << endl << " testing 2 " << endl;
-		Vector& t2 = network.predict(getTwo());
+		Vector t2 = network.predict(getTwo());
 		printConf(t2);
 
 		cout << endl << " testing 3 " << endl;
-		Vector& t3 = network.predict(getThree());
+		Vector t3 = network.predict(getThree());
 		printConf(t3);
 
 		cout << endl << " testing 4 " << endl;
-		Vector& t4 = network.predict(getFour());
+		Vector t4 = network.predict(getFour());
 		printConf(t4);
 
 		cout << endl << " testing 5 " << endl;
-		Vector& t5 = network.predict(getFive());
+		Vector t5 = network.predict(getFive());
 		printConf(t5);
 
 		cout << endl << " testing 6 " << endl;
-		Vector& t6 = network.predict(getSix());
+		Vector t6 = network.predict(getSix());
 		printConf(t6);
 
 		cout << endl << " testing 7 " << endl;
-		Vector& t7 = network.predict(getSeven());
+		Vector t7 = network.predict(getSeven());
 		printConf(t7);
 
 		cout << endl << " testing 8 " << endl;
-		Vector& t8 = network.predict(getEight());
+		Vector t8 = network.predict(getEight());
 		printConf(t8);
 
 		cout << endl << " testing 9" << endl;
-		Vector& t9 = network.predict(getNine());
+		Vector t9 = network.predict(getNine());
 		printConf(t9);
 
 		cout << endl;
@@ -447,8 +447,8 @@ void XORtest() {
 }
 
 int main() {
- //conv_drTest();
-	reccurent_drTest();
+ conv_drTest();
+	//reccurent_drTest();
 
 	
 	

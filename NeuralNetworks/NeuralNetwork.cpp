@@ -59,11 +59,11 @@ double sum(Vector& v) {
 }
 Vector NeuralNetwork::backwardPropagation(const Vector & y)
 {
-	Vector& dy = Ot() - y;
+	Vector dy = Ot() - y;
 	bpO.pop_back();
 //	std::cout << " delta sum is " << sum(dy) << std::endl;
 
-	Vector& delta = output->backwardPropagation(dy);
+	Vector delta = output->backwardPropagation(dy);
 	if (prev != nullptr) {
 		prev->backwardPropagation(delta);
 	}
@@ -74,7 +74,7 @@ Vector NeuralNetwork::backwardPropagation(const Vector & y)
 
 Vector NeuralNetwork::backwardPropagation_ThroughTime(const Vector & dy)
 {
-	Vector& delta = output->backwardPropagation_ThroughTime(dy);
+	Vector delta = output->backwardPropagation_ThroughTime(dy);
 
 	if (prev != nullptr) {
 		prev->backwardPropagation_ThroughTime(delta);

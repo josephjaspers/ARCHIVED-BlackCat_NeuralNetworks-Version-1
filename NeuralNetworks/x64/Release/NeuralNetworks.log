@@ -1,2 +1,9 @@
-﻿  NeuralNetworks.vcxproj -> C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\x64\Release\NeuralNetworks.exe
+﻿  FF_norec.cpp
+  Generating code
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonlinearityfunction.h(90): warning C4715: 'nonLinearityFunct::operator()': not all control paths return a value
+  23 of 433 functions ( 5.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    18 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  NeuralNetworks.vcxproj -> C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\x64\Release\NeuralNetworks.exe
   NeuralNetworks.vcxproj -> C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\x64\Release\NeuralNetworks.pdb (Full PDB)

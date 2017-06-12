@@ -22,21 +22,29 @@ FeedForward::FeedForward(int inputs, int outputs) : Layer(inputs, outputs)
 
 Vector FeedForward::forwardPropagation_express(const Vector & x)
 {
-	if (next != nullptr) 
-		return next->forwardPropagation_express(g(w * x + b));
-	else 
-		return g(w * x + b);
+	Vector a = w * x + b;
+	g(a);
+
+	if (next != nullptr) {
+		return next->forwardPropagation_express(a);
+	}
+	else {
+		return a;
+	}
 }
 
 Vector FeedForward::forwardPropagation(const Vector & x)
 {
 
 	bpX.push_back(x); //store the inputs
+	Vector a = w * x + b;
+	g(a);
+
 
 	if (next != nullptr)
-		return next->forwardPropagation(g(w * x + b));
+		return next->forwardPropagation(a);
 	else
-		return g(w * x + b);
+		return a;
 }
 
 Vector FeedForward::backwardPropagation(const Vector & dy)
@@ -45,7 +53,7 @@ Vector FeedForward::backwardPropagation(const Vector & dy)
 	w_gradientStorage -= (dy * Xt());
 	b_gradientStorage -= dy;
 	//input delta
-	Vector& dx = w.T() * dy & g.d(Xt());
+	Vector dx = w.T() * dy & g.d(Xt());
 	//update storage
 	bpX.pop_back();
 	//continue backprop0
@@ -62,7 +70,7 @@ Vector FeedForward::backwardPropagation_ThroughTime(const Vector & dy)
 	w_gradientStorage -= (dy * Xt());
 	b_gradientStorage -= dy;
 	//input delta
-	Vector& dx = w.T() * dy & g.d(Xt());
+	Vector dx = w.T() * dy & g.d(Xt());
 	//update storage
 	bpX.pop_back();
 	//continue backprop

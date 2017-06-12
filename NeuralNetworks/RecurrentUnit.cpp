@@ -36,7 +36,9 @@ RecurrentUnit::RecurrentUnit(int inputs, int outputs) : Layer(inputs, outputs)
 
 Vector RecurrentUnit::forwardPropagation_express(const Vector & x)
 {
-	c = g(w * x + r * c + b);
+	c = w * x + r * c + b;
+	g(c);
+
 	if (next != nullptr) 
 		return next->forwardPropagation_express(c);
 	else
@@ -51,7 +53,7 @@ Vector RecurrentUnit::forwardPropagation(const Vector & input)
 	//set x to inputs
 	x = input;
 	//set the cellstate (c is the output)
-	c = g(w * x + r * c + b);
+	g(c = (w * x + r * c + b));
 	//continue backprop
 	if (next != nullptr)
 		return next->forwardPropagation(c);
@@ -66,7 +68,7 @@ Vector RecurrentUnit::backwardPropagation(const Vector & dy)
 	b_gradientStorage -= dy;
 	r_gradientStorage -= dy * c; 
 	//get input error
-	Vector& dx = (w.T() * dy) & g.d(x);
+	Vector dx = (w.T() * dy) & g.d(x);
 	//continue backpropagation
 	if (prev != nullptr) {
 		return prev->backwardPropagation(dx);
@@ -82,7 +84,7 @@ Vector RecurrentUnit::backwardPropagation_ThroughTime(const Vector & dy)
 	b_gradientStorage -= dy;
 	r_gradientStorage -= dy * Ct();
 	//get input error
-	Vector& dx = (w.T() * dy) & g.d(Xt());
+	Vector dx = (w.T() * dy) & g.d(Xt());
 	//update backprop storage
 	bpX.pop_back();
 	bpC.pop_back();

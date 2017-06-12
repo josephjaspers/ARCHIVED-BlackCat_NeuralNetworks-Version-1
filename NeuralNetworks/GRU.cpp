@@ -89,8 +89,10 @@ Vector GRU::forwardPropagation_express(const Vector & input)
 {
 	x = input;
 
-	f = f_g(wf * x + rf * c + bf);
-	z = z_g(wz * x + rz * c + bz);
+	f = (wf * x + rf * c + bf);
+	f_g(f);
+	z = (wz * x + rz * c + bz);
+	z_g(z);
 
 	c &= f;
 	c += z;
@@ -110,8 +112,12 @@ Vector GRU::forwardPropagation(const Vector & input)
 	bpZ.push_back(z);
 	//Math 
 	x = input;
-	f = f_g(wf * x + rf * c + bf);
-	z = z_g(wz * x + rz * c + bz);
+	
+	f = wf * x + rf * c + bf;
+	f_g(f);
+	
+	z = wz * x + rz * c + bz;
+	z_g(z);
 
 	c &= f;
 	c += z;
@@ -138,7 +144,7 @@ Vector GRU::backwardPropagation(const Vector & dy)
 	bf_gradientStorage -= df;
 	rf_gradientStorage -= df * c;
 	//calculate input error
-	Vector& dx = (wz.T() * dz + wf.T() * df);// &g.d(Xt());
+	Vector dx = (wz.T() * dz + wf.T() * df);// &g.d(Xt());
 	//send error through forget gate 
 	dc &= f;
 	//continue backpropagation
@@ -164,7 +170,7 @@ Vector GRU::backwardPropagation_ThroughTime(const Vector & dy)
 	bf_gradientStorage -= df;
 	rf_gradientStorage -= df * Ct();
 	//get input error
-	Vector& dx = (wz.T() * dz + wf.T() * df);
+	Vector dx = (wz.T() * dz + wf.T() * df);
 	//send the error through the gate 
 	dc &= Ft();
 	//update backprop storage
