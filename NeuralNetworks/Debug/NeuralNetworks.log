@@ -1,31 +1,9 @@
-﻿  CNN.cpp
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.h(71): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.h(77): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrices.h(348): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrices.h(515): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrices.h(526): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\cnn.cpp(22): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\cnn.cpp(22): warning C4244: 'initializing': conversion from 'double' to 'const unsigned int', possible loss of data
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\cnn.cpp(24): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\cnn.cpp(31): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\cnn.cpp(37): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\cnn.cpp(51): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\cnn.cpp(67): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\cnn.cpp(87): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\cnn.cpp(102): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\cnn.cpp(110): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\cnn.cpp(120): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\cnn.cpp(128): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\cnn.cpp(6): warning C4172: returning address of local variable or temporary
-  Skipping... (no relevant changes detected)
-  main.cpp
-  RecurrentUnit.cpp
-  NeuralNetwork.cpp
-  LSTM.cpp
-  GRU.cpp
-  Filter.cpp
-  FeedForward.cpp
-  FF_norec.cpp
-  NeuralNetworks.vcxproj -> C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\Debug\NeuralNetworks.exe
-  NeuralNetworks.vcxproj -> C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\Debug\NeuralNetworks.pdb (Full PDB)
+﻿  Matrix.lib(Matrix.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+FeedForward.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/OPT:LBR' specification
+Matrix.lib(Matrix.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in FeedForward.obj
+Matrix.lib(Matrix.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in FeedForward.obj
+Matrix.lib(Vector.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in FeedForward.obj
+Matrix.lib(Vector.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MD_DynamicRelease' doesn't match value 'MDd_DynamicDebug' in FeedForward.obj
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\Debug\NeuralNetworks.exe : fatal error LNK1319: 4 mismatches detected

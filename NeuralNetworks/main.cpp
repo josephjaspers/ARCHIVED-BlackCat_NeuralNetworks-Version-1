@@ -246,9 +246,9 @@ void reccurent_drTest() {
 	ifstream is("testFile");
 
 	network.push_back(new LSTM(5, 10));
-	network.push_back(new GRU(10, 15));
-	network.push_back(new RecurrentUnit(15, 20));
-	network.push_back(new FeedForward(20, 10));
+	//network.push_back(new GRU(10, 15));
+	//network.push_back(new RecurrentUnit(15, 20));
+	network.push_back(new FeedForward(10, 10));
 	//network.read(is);
 
 	int train = 1;
@@ -447,8 +447,8 @@ void XORtest() {
 }
 
 int main() {
- conv_drTest();
-	//reccurent_drTest();
+ //conv_drTest();
+	reccurent_drTest();
 
 	
 	
