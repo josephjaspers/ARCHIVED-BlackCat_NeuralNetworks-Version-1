@@ -1,5 +1,4 @@
 #include "stdafx.h"
-/*
 #include "CNN.h"
 Matrix CNN::Xt()
 {
@@ -118,6 +117,30 @@ Vector CNN::forwardPropagation_express(const Vector &input)
 	else {
 		return v_output;
 	}
+	/*
+
+	///BELOW IS CONFIRMED WORKING METHOD ABOVE IS CURRENT TEST
+
+	Matrix img = vec_toMatrix(input, LENGTH, WIDTH);
+	Matrix pooled = Matrix(POOLED_LENGTH, POOLED_WIDTH);
+
+	for (int x = 0; x < img.length() - FEATURE_LENGTH + 1; x += STRIDE) {
+		for (int y = 0; y < img.width() - FEATURE_WIDTH + 1; y += STRIDE) {
+			Matrix a = Matrix(FEATURE_LENGTH, FEATURE_WIDTH);
+			a = img.sub_Matrix(x, y, FEATURE_LENGTH, FEATURE_WIDTH);
+			Matrix conv = g(w * a + b);
+
+			pooled[x / STRIDE][y / STRIDE] = conv.max();
+		}
+	}
+	
+	if (next != nullptr) {
+		return next->forwardPropagation_express(mat_toVector(pooled));
+	}
+	else {
+		return mat_toVector(pooled);
+	}
+	*/
 }
 Vector CNN::forwardPropagation(const Vector & input)
 {
@@ -134,6 +157,40 @@ Vector CNN::forwardPropagation(const Vector & input)
 	else {
 		return v_output;
 	}
+	/*
+	//above is test below is correct
+
+	bp_max_index_x.clear();
+	bp_max_index_y.clear();
+
+	Matrix img = vec_toMatrix(input, LENGTH, WIDTH);
+	Matrix pooled = Matrix(POOLED_LENGTH, POOLED_WIDTH);
+	bpX.push_back(img);
+
+	for (int x = 0; x < img.length() - FEATURE_LENGTH + 1; x += STRIDE) {
+		for (int y = 0; y < img.width() - FEATURE_WIDTH + 1; y += STRIDE) {
+			Matrix a = img.sub_Matrix(x, y, FEATURE_LENGTH, FEATURE_WIDTH);
+
+			Matrix conv = g(w * a + b);
+
+			int max_index_x;
+			int max_index_y;
+			pooled[x / STRIDE][y / STRIDE] = findMax(conv, max_index_x, max_index_y);
+
+			bp_max_value.push_back(pooled[x / STRIDE][y / STRIDE]);
+			bp_max_index_x.push_back(max_index_x);
+			bp_max_index_y.push_back(max_index_y);
+		}
+	}
+
+
+	if (next != nullptr) {
+		return next->forwardPropagation(mat_toVector(pooled));
+	}
+	else {
+		return mat_toVector(pooled);
+	}
+	*/
 }
 static double sigmoid(double d) {
 	return 1 / (1 + pow(2.71828, -d));
@@ -144,6 +201,31 @@ static double sigmoid_deriv(double d) {
 Vector CNN::backwardPropagation(const Vector & dy)
 {
 	return backwardPropagation(dy, 0);
+	/*
+	///above is test below is golden
+	if (dy.length() != POOLED_LENGTH * POOLED_WIDTH) {
+		std::cout << "invalid dy length given = " << dy.length() << " need length " << POOLED_LENGTH * POOLED_WIDTH << std::endl;
+		throw std::invalid_argument("rr");
+	}
+
+	Matrix& img_xt = Xt();
+
+	int dy_index = 0;
+	for (int x = 0; x < img_xt.length() - FEATURE_LENGTH; x += STRIDE) {
+		for (int y = 0; y < img_xt.width() - FEATURE_WIDTH; y += STRIDE) {
+			//delta[bp_max_index_x[dy_index]][bp_max_index_y[dy_index]] = dy.get(dy_index);
+			//w_gradientStorage -= delta; &g.d(g(img_xt.sub_Matrix(x, y, FEATURE_LENGTH, FEATURE_WIDTH)));
+			//b_gradientStorage -= delta;
+			w_gradientStorage[bp_max_index_x[dy_index]][bp_max_index_y[dy_index]] -= dy.get(dy_index) * sigmoid_deriv(bp_max_value[dy_index]);
+			b_gradientStorage[bp_max_index_x[dy_index]][bp_max_index_y[dy_index]] -= dy.get(dy_index);
+
+			dy_index++;
+		}
+	}
+	bpX.pop_back();
+
+	return dy;
+	*/
 }
 
 Vector CNN::backwardPropagation_ThroughTime(const Vector & dy)
@@ -298,4 +380,3 @@ void CNN::updateGradients()
 	Layer::updateGradients();
 
 }
-*/

@@ -215,8 +215,7 @@ Vector LSTM::backwardPropagation(const Vector & dy)
 Vector LSTM::backwardPropagation_ThroughTime(const Vector & deltaError)
 {
 	//calculate delta 
-	
-	Vector& dy = deltaError + (rz ->* dz) + (ri ->* di) + (rf ->* df) + (ro ->* od);
+	Vector& dy = deltaError + rz.T() * dz + ri.T() * di + rf.T() * df + ro.T() * od;
 	//math of error 
 	dc += dy & g.d(y) & Ot() & g.d(g.nonLin(Ct()));
 	od = dc & g.nonLin(Ct()) & o_g.d(Ot());
@@ -376,21 +375,21 @@ void LSTM::set_OutputGate_Tanh()
 
 void LSTM::storeGradients()
 {
-	wz_gradientStorage -= dz ->* x;
+	wz_gradientStorage -= dz * x;
 	bz_gradientStorage -= dz;
-	rz_gradientStorage -= dz ->* c;
+	rz_gradientStorage -= dz * c;
 
-	wf_gradientStorage -= df ->* x;
+	wf_gradientStorage -= df * x;
 	bf_gradientStorage -= df;
-	rf_gradientStorage -= df ->* c;
+	rf_gradientStorage -= df * c;
 
-	wi_gradientStorage -= di ->* x;
+	wi_gradientStorage -= di * x;
 	bi_gradientStorage -= di;
-	ri_gradientStorage -= di ->* c;
+	ri_gradientStorage -= di * c;
 
-	wo_gradientStorage -= od ->* x;
+	wo_gradientStorage -= od * x;
 	bo_gradientStorage -= od;
-	ro_gradientStorage -= od ->* c;
+	ro_gradientStorage -= od * c;
 }
 
 void LSTM::storeGradients_BPTT()

@@ -42,7 +42,7 @@ Vector FeedForward::forwardPropagation(const Vector & x)
 Vector FeedForward::backwardPropagation(const Vector & dy)
 {
 	//Store gradients 
-	w_gradientStorage -= (dy ->* Xt());
+	w_gradientStorage -= (dy * Xt());
 	b_gradientStorage -= dy;
 	//input delta
 	Vector& dx = w.T() * dy & g.d(Xt());
@@ -59,18 +59,15 @@ Vector FeedForward::backwardPropagation_ThroughTime(const Vector & dy)
 {	
 
 	//Store gradients 
-	w_gradientStorage -= (dy ->* Xt());
+	w_gradientStorage -= (dy * Xt());
 	b_gradientStorage -= dy;
 	//input delta
-	Vector& dx = (w.T() * dy) & g.d(Xt());
+	Vector& dx = w.T() * dy & g.d(Xt());
 	//update storage
 	bpX.pop_back();
 	//continue backprop
-	if (prev != nullptr) {
-		//std::cout << " sending error " << std::endl;
-		//dx.print();
+	if (prev != nullptr)
 		return prev->backwardPropagation_ThroughTime(dx);
-	}
 	else
 		return dx;
 }

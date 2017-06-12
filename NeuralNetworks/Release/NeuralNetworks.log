@@ -1,387 +1,93 @@
-﻿  FF_norec.cpp
+﻿  main.cpp
 c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\Vector.h(71): warning C4018: '<': signed/unsigned mismatch
 c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\Vector.h(77): warning C4018: '<': signed/unsigned mismatch
 C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(348): warning C4018: '<': signed/unsigned mismatch
 C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(515): warning C4018: '<': signed/unsigned mismatch
 C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(526): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): error C2171: '-': illegal on operands of type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): note: while trying to match the argument list '(double, double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(203): error C2113: '-': pointer can only be subtracted from another pointer
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(209): error C2665: 'tanh': none of the 3 overloads could convert all the argument types
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(475): note: could be 'double tanh(double)'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(313): note: or       'float tanh(float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(625): note: or       'long double tanh(long double) noexcept'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(209): note: while trying to match the argument list '(double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(215): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(215): note: while trying to match the argument list '(double *, int)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(222): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(222): note: while trying to match the argument list '(const double, double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(223): error C2297: '+=': illegal, right operand has type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(223): error C2440: '+=': cannot convert from 'double *' to 'double'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(226): error C2296: '/=': illegal, left operand has type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(235): error C2446: '>': no conversion from 'int' to 'double *'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(235): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(236): error C2440: '=': cannot convert from 'int' to 'double *'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(236): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
-FF_norec.cpp(43): error C2296: '->*': illegal, left operand has type 'const Vector'
-FF_norec.cpp(43): error C2297: '->*': illegal, right operand has type 'Vector'
-FF_norec.cpp(65): error C2296: '->*': illegal, left operand has type 'const Vector'
-FF_norec.cpp(65): error C2297: '->*': illegal, right operand has type 'Vector'
-  FeedForward.cpp
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\Vector.h(71): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\Vector.h(77): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(348): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(515): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(526): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): error C2171: '-': illegal on operands of type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): note: while trying to match the argument list '(double, double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(203): error C2113: '-': pointer can only be subtracted from another pointer
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(209): error C2665: 'tanh': none of the 3 overloads could convert all the argument types
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(475): note: could be 'double tanh(double)'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(313): note: or       'float tanh(float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(625): note: or       'long double tanh(long double) noexcept'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(209): note: while trying to match the argument list '(double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(215): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(215): note: while trying to match the argument list '(double *, int)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(222): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(222): note: while trying to match the argument list '(const double, double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(223): error C2297: '+=': illegal, right operand has type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(223): error C2440: '+=': cannot convert from 'double *' to 'double'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(226): error C2296: '/=': illegal, left operand has type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(235): error C2446: '>': no conversion from 'int' to 'double *'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(235): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(236): error C2440: '=': cannot convert from 'int' to 'double *'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(236): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
-FeedForward.cpp(45): error C2296: '->*': illegal, left operand has type 'const Vector'
-FeedForward.cpp(45): error C2297: '->*': illegal, right operand has type 'const Vector'
-FeedForward.cpp(48): error C2296: '->*': illegal, left operand has type 'Matrix'
-FeedForward.cpp(48): error C2297: '->*': illegal, right operand has type 'const Vector'
-FeedForward.cpp(48): error C2530: 'dx': references must be initialized
-FeedForward.cpp(62): error C2296: '->*': illegal, left operand has type 'const Vector'
-FeedForward.cpp(62): error C2297: '->*': illegal, right operand has type 'const Vector'
-FeedForward.cpp(65): error C2296: '->*': illegal, left operand has type 'Matrix'
-FeedForward.cpp(65): error C2297: '->*': illegal, right operand has type 'const Vector'
-FeedForward.cpp(65): error C2530: 'dx': references must be initialized
-  GRU.cpp
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\Vector.h(71): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\Vector.h(77): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(348): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(515): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(526): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): error C2171: '-': illegal on operands of type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): note: while trying to match the argument list '(double, double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(203): error C2113: '-': pointer can only be subtracted from another pointer
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(209): error C2665: 'tanh': none of the 3 overloads could convert all the argument types
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(475): note: could be 'double tanh(double)'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(313): note: or       'float tanh(float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(625): note: or       'long double tanh(long double) noexcept'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(209): note: while trying to match the argument list '(double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(215): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(215): note: while trying to match the argument list '(double *, int)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(222): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(222): note: while trying to match the argument list '(const double, double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(223): error C2297: '+=': illegal, right operand has type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(223): error C2440: '+=': cannot convert from 'double *' to 'double'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(226): error C2296: '/=': illegal, left operand has type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(235): error C2446: '>': no conversion from 'int' to 'double *'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(235): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(236): error C2440: '=': cannot convert from 'int' to 'double *'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(236): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
-GRU.cpp(133): error C2296: '->*': illegal, left operand has type 'Vector'
-GRU.cpp(133): error C2297: '->*': illegal, right operand has type 'Vector'
-GRU.cpp(135): error C2296: '->*': illegal, left operand has type 'Vector'
-GRU.cpp(135): error C2297: '->*': illegal, right operand has type 'Vector'
-GRU.cpp(137): error C2296: '->*': illegal, left operand has type 'Vector'
-GRU.cpp(137): error C2297: '->*': illegal, right operand has type 'Vector'
-GRU.cpp(139): error C2296: '->*': illegal, left operand has type 'Vector'
-GRU.cpp(139): error C2297: '->*': illegal, right operand has type 'Vector'
-GRU.cpp(141): error C2296: '->*': illegal, left operand has type 'Matrix'
-GRU.cpp(141): error C2297: '->*': illegal, right operand has type 'Vector'
-GRU.cpp(141): error C2530: 'dx': references must be initialized
-GRU.cpp(155): error C2296: '->*': illegal, left operand has type 'Matrix'
-GRU.cpp(155): error C2297: '->*': illegal, right operand has type 'Vector'
-GRU.cpp(159): error C2296: '->*': illegal, left operand has type 'Vector'
-GRU.cpp(159): error C2297: '->*': illegal, right operand has type 'const Vector'
-GRU.cpp(161): error C2296: '->*': illegal, left operand has type 'Vector'
-GRU.cpp(161): error C2297: '->*': illegal, right operand has type 'const Vector'
-GRU.cpp(163): error C2296: '->*': illegal, left operand has type 'Vector'
-GRU.cpp(163): error C2297: '->*': illegal, right operand has type 'const Vector'
-GRU.cpp(165): error C2296: '->*': illegal, left operand has type 'Vector'
-GRU.cpp(165): error C2297: '->*': illegal, right operand has type 'const Vector'
-GRU.cpp(167): error C2296: '->*': illegal, left operand has type 'Matrix'
-GRU.cpp(167): error C2297: '->*': illegal, right operand has type 'Vector'
-GRU.cpp(167): error C2530: 'dx': references must be initialized
-  LSTM.cpp
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\Vector.h(71): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\Vector.h(77): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(348): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(515): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(526): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): error C2171: '-': illegal on operands of type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): note: while trying to match the argument list '(double, double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(203): error C2113: '-': pointer can only be subtracted from another pointer
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(209): error C2665: 'tanh': none of the 3 overloads could convert all the argument types
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(475): note: could be 'double tanh(double)'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(313): note: or       'float tanh(float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(625): note: or       'long double tanh(long double) noexcept'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(209): note: while trying to match the argument list '(double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(215): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(215): note: while trying to match the argument list '(double *, int)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(222): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(222): note: while trying to match the argument list '(const double, double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(223): error C2297: '+=': illegal, right operand has type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(223): error C2440: '+=': cannot convert from 'double *' to 'double'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(226): error C2296: '/=': illegal, left operand has type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(235): error C2446: '>': no conversion from 'int' to 'double *'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(235): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(236): error C2440: '=': cannot convert from 'int' to 'double *'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(236): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
-LSTM.cpp(219): error C2296: '->*': illegal, left operand has type 'Matrix'
-LSTM.cpp(219): error C2297: '->*': illegal, right operand has type 'Vector'
-LSTM.cpp(219): error C2530: 'dy': references must be initialized
-LSTM.cpp(379): error C2296: '->*': illegal, left operand has type 'Vector'
-LSTM.cpp(379): error C2297: '->*': illegal, right operand has type 'Vector'
-LSTM.cpp(381): error C2296: '->*': illegal, left operand has type 'Vector'
-LSTM.cpp(381): error C2297: '->*': illegal, right operand has type 'Vector'
-LSTM.cpp(383): error C2296: '->*': illegal, left operand has type 'Vector'
-LSTM.cpp(383): error C2297: '->*': illegal, right operand has type 'Vector'
-LSTM.cpp(385): error C2296: '->*': illegal, left operand has type 'Vector'
-LSTM.cpp(385): error C2297: '->*': illegal, right operand has type 'Vector'
-LSTM.cpp(387): error C2296: '->*': illegal, left operand has type 'Vector'
-LSTM.cpp(387): error C2297: '->*': illegal, right operand has type 'Vector'
-LSTM.cpp(389): error C2296: '->*': illegal, left operand has type 'Vector'
-LSTM.cpp(389): error C2297: '->*': illegal, right operand has type 'Vector'
-LSTM.cpp(391): error C2296: '->*': illegal, left operand has type 'Vector'
-LSTM.cpp(391): error C2297: '->*': illegal, right operand has type 'Vector'
-LSTM.cpp(393): error C2296: '->*': illegal, left operand has type 'Vector'
-LSTM.cpp(393): error C2297: '->*': illegal, right operand has type 'Vector'
-  NeuralNetwork.cpp
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\Vector.h(71): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\Vector.h(77): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(348): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(515): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(526): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): error C2171: '-': illegal on operands of type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): note: while trying to match the argument list '(double, double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(203): error C2113: '-': pointer can only be subtracted from another pointer
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(209): error C2665: 'tanh': none of the 3 overloads could convert all the argument types
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(475): note: could be 'double tanh(double)'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(313): note: or       'float tanh(float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(625): note: or       'long double tanh(long double) noexcept'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(209): note: while trying to match the argument list '(double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(215): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(215): note: while trying to match the argument list '(double *, int)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(222): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(222): note: while trying to match the argument list '(const double, double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(223): error C2297: '+=': illegal, right operand has type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(223): error C2440: '+=': cannot convert from 'double *' to 'double'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(226): error C2296: '/=': illegal, left operand has type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(235): error C2446: '>': no conversion from 'int' to 'double *'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(235): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(236): error C2440: '=': cannot convert from 'int' to 'double *'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(236): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\NeuralNetwork.h(50): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\NeuralNetwork.h(59): warning C4018: '<': signed/unsigned mismatch
-NeuralNetwork.cpp(95): warning C4018: '<': signed/unsigned mismatch
-NeuralNetwork.cpp(108): warning C4018: '<': signed/unsigned mismatch
-NeuralNetwork.cpp(135): warning C4018: '<': signed/unsigned mismatch
-  RecurrentUnit.cpp
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\Vector.h(71): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\Vector.h(77): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(348): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(515): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(526): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): error C2171: '-': illegal on operands of type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): note: while trying to match the argument list '(double, double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(203): error C2113: '-': pointer can only be subtracted from another pointer
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(209): error C2665: 'tanh': none of the 3 overloads could convert all the argument types
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(475): note: could be 'double tanh(double)'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(313): note: or       'float tanh(float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(625): note: or       'long double tanh(long double) noexcept'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(209): note: while trying to match the argument list '(double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(215): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(215): note: while trying to match the argument list '(double *, int)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(222): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(222): note: while trying to match the argument list '(const double, double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(223): error C2297: '+=': illegal, right operand has type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(223): error C2440: '+=': cannot convert from 'double *' to 'double'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(226): error C2296: '/=': illegal, left operand has type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(235): error C2446: '>': no conversion from 'int' to 'double *'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(235): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(236): error C2440: '=': cannot convert from 'int' to 'double *'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(236): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
-RecurrentUnit.cpp(65): error C2296: '->*': illegal, left operand has type 'const Vector'
-RecurrentUnit.cpp(65): error C2297: '->*': illegal, right operand has type 'Vector'
-RecurrentUnit.cpp(67): error C2296: '->*': illegal, left operand has type 'const Vector'
-RecurrentUnit.cpp(67): error C2297: '->*': illegal, right operand has type 'Vector'
-RecurrentUnit.cpp(69): error C2296: '->*': illegal, left operand has type 'Matrix'
-RecurrentUnit.cpp(69): error C2297: '->*': illegal, right operand has type 'const Vector'
-RecurrentUnit.cpp(69): error C2530: 'dx': references must be initialized
-RecurrentUnit.cpp(81): error C2296: '->*': illegal, left operand has type 'const Vector'
-RecurrentUnit.cpp(81): error C2297: '->*': illegal, right operand has type 'const Vector'
-RecurrentUnit.cpp(83): error C2296: '->*': illegal, left operand has type 'const Vector'
-RecurrentUnit.cpp(83): error C2297: '->*': illegal, right operand has type 'const Vector'
-RecurrentUnit.cpp(85): error C2296: '->*': illegal, left operand has type 'Matrix'
-RecurrentUnit.cpp(85): error C2297: '->*': illegal, right operand has type 'const Vector'
-RecurrentUnit.cpp(85): error C2530: 'dx': references must be initialized
-  main.cpp
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\Vector.h(71): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\Vector.h(77): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(348): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(515): warning C4018: '<': signed/unsigned mismatch
-C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix\Matrices.h(526): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): error C2171: '-': illegal on operands of type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(197): note: while trying to match the argument list '(double, double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(203): error C2113: '-': pointer can only be subtracted from another pointer
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(209): error C2665: 'tanh': none of the 3 overloads could convert all the argument types
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(475): note: could be 'double tanh(double)'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(313): note: or       'float tanh(float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(625): note: or       'long double tanh(long double) noexcept'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(209): note: while trying to match the argument list '(double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(215): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(215): note: while trying to match the argument list '(double *, int)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(222): error C2665: 'pow': none of the 6 overloads could convert all the argument types
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(562): note: could be 'long double pow(long double,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(556): note: or       'long double pow(long double,long double) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(254): note: or       'float pow(float,int) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(248): note: or       'float pow(float,float) noexcept'
-  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\cmath(22): note: or       'double pow(double,int) noexcept'
-  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\math.h(470): note: or       'double pow(double,double)'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(222): note: while trying to match the argument list '(const double, double *)'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(223): error C2297: '+=': illegal, right operand has type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(223): error C2440: '+=': cannot convert from 'double *' to 'double'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(226): error C2296: '/=': illegal, left operand has type 'double *'
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(235): error C2446: '>': no conversion from 'int' to 'double *'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(235): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(236): error C2440: '=': cannot convert from 'int' to 'double *'
-  c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonLinearityFunction.h(236): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or function-style cast
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\NeuralNetwork.h(50): warning C4018: '<': signed/unsigned mismatch
-c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\NeuralNetwork.h(59): warning C4018: '<': signed/unsigned mismatch
-main.cpp(27): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\NeuralNetwork.h(48): warning C4018: '<': signed/unsigned mismatch
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\NeuralNetwork.h(57): warning C4018: '<': signed/unsigned mismatch
+main.cpp(26): warning C4018: '<': signed/unsigned mismatch
+  Generating code
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(278): warning C4711: function 'double & __thiscall Vector::operator[](int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(187): warning C4711: function 'int __thiscall Vector::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\neuralnetwork.cpp(85): warning C4715: 'NeuralNetwork::backwardPropagation_ThroughTime': not all control paths return a value
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(226): warning C4711: function '__thiscall Vector::Vector(unsigned int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(228): warning C4711: function 'double & __thiscall Vector::operator[](int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\neuralnetwork.cpp(38): warning C4715: 'NeuralNetwork::forwardPropagation_express': not all control paths return a value
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(71): warning C4711: function '__thiscall Matrix::Matrix(unsigned int,unsigned int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(526): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(bool)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(526): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(530): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(int)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(531): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(532): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(int)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(533): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(534): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(int)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(535): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(539): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(double)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(539): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(537): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(538): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonlinearityfunction.h(90): warning C4715: 'nonLinearityFunct::operator()': not all control paths return a value
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(313): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(bool)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(313): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(315): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char const *)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(318): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(int)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(318): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(320): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(double)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(320): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(315): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(class std::basic_ostream<char,struct std::char_traits<char> > & (__cdecl*)(class std::basic_ostream<char,struct std::char_traits<char> > &))': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(290): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __thiscall std::basic_ostream<char,struct std::char_traits<char> >::operator<<(double)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(290): warning C4710: 'class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl std::operator<<<struct std::char_traits<char> >(class std::basic_ostream<char,struct std::char_traits<char> > &,char const *)': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonlinearityfunction.h(200): warning C4715: 'nonLinearityFunct::operator()': not all control paths return a value
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\nonlinearityfunction.h(109): warning C4715: 'nonLinearityFunct::d': not all control paths return a value
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(73): warning C4711: function 'int __thiscall Vector::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(467): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(467): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(468): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(468): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(468): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(468): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(473): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(473): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(474): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(474): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(474): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(474): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(325): warning C4710: 'void __thiscall Vector::chkBounds(int)const ': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(57): warning C4710: 'void __thiscall Vector::chkBounds(int)const ': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(178): warning C4710: 'void __thiscall Vector::chkBounds(class Vector const &)const ': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(180): warning C4711: function 'int __thiscall Vector::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(143): warning C4711: function '__thiscall Vector::Vector(unsigned int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(145): warning C4711: function 'double & __thiscall Vector::operator[](int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(133): warning C4711: function '__thiscall Vector::Vector(unsigned int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(135): warning C4711: function 'double & __thiscall Vector::operator[](int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(123): warning C4711: function '__thiscall Vector::Vector(unsigned int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\vector.cpp(125): warning C4711: function 'double & __thiscall Vector::operator[](int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(142): warning C4710: 'void __thiscall Matrix::chkBounds(int,int)const ': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(343): warning C4710: 'void __thiscall Matrix::chkBounds(class Matrix const &)const ': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(345): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(346): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(332): warning C4710: 'void __thiscall Matrix::chkBounds(class Matrix const &)const ': function not inlined
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(334): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(335): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(416): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(416): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(416): warning C4711: function '__thiscall Matrix::Matrix(unsigned int,unsigned int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(418): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(419): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(236): warning C4711: function '__thiscall Matrix::Matrix(unsigned int,unsigned int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(193): warning C4711: function '__thiscall Matrix::Matrix(unsigned int,unsigned int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(194): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(195): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(161): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(161): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(165): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(165): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(165): warning C4711: function '__thiscall Matrix::Matrix(unsigned int,unsigned int)' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(168): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(169): warning C4711: function 'int __thiscall Matrix::width(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(171): warning C4711: function 'int __thiscall Matrix::length(void)const ' selected for automatic inline expansion
+c:\users\joeyj\onedrive\documents\visual studio 2015\projects\neuralnetworks\neuralnetworks\neuralnetwork.cpp(73): warning C4715: 'NeuralNetwork::backwardPropagation': not all control paths return a value
+  Finished generating code
+  NeuralNetworks.vcxproj -> C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\Release\NeuralNetworks.exe
+  NeuralNetworks.vcxproj -> C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\NeuralNetworks\Release\NeuralNetworks.pdb (Full PDB)

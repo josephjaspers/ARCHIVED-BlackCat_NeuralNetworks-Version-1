@@ -130,13 +130,13 @@ Vector GRU::backwardPropagation(const Vector & dy)
 	dz = dc & z_g.d(z);
 	df = dc & Ct() & f_g.d(f);
 	//Store gradients
-	wz_gradientStorage -= (dz ->* x);
+	wz_gradientStorage -= (dz * x);
 	bz_gradientStorage -= dz;
-	rz_gradientStorage -= dz ->* c;
+	rz_gradientStorage -= dz * c;
 
-	wf_gradientStorage -= (df ->* x);
+	wf_gradientStorage -= (df * x);
 	bf_gradientStorage -= df;
-	rf_gradientStorage -= df ->* c;
+	rf_gradientStorage -= df * c;
 	//calculate input error
 	Vector& dx = (wz.T() * dz + wf.T() * df);// &g.d(Xt());
 	//send error through forget gate 
@@ -152,17 +152,17 @@ Vector GRU::backwardPropagation(const Vector & dy)
 Vector GRU::backwardPropagation_ThroughTime(const Vector & dy)
 {
 	//calculate delta c error 
-	dc += dy + (rz ->* dz) + (rf ->* df);
+	dc += dy + rz.T() * dz + rf.T() * df;
 	df = dc & Ct_1() & f_g.d(Ft());
 	dz = dc & g.d(Zt());
 	//Store gradients 
-	wz_gradientStorage -= dz ->* Xt();
+	wz_gradientStorage -= dz * Xt();
 	bz_gradientStorage -= dz;
-	rz_gradientStorage -= dz ->* Ct();
+	rz_gradientStorage -= dz * Ct();
 
-	wf_gradientStorage -= df ->* Xt();
+	wf_gradientStorage -= df * Xt();
 	bf_gradientStorage -= df;
-	rf_gradientStorage -= df ->* Ct();
+	rf_gradientStorage -= df * Ct();
 	//get input error
 	Vector& dx = (wz.T() * dz + wf.T() * df);
 	//send the error through the gate 

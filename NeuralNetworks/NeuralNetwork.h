@@ -11,15 +11,13 @@
 #include "GRU.h"
 #include "LSTM.h"
 
-
-
 class NeuralNetwork : public Layer {
 
 	Layer* input;	//first of linked list
 	Layer* output;	//last of linked list
 
 	int size;
-	int numb_threads = 1000;
+
 	bpStorage bpO;
 	const Vector& Ot() { return bpO.back(); }
 

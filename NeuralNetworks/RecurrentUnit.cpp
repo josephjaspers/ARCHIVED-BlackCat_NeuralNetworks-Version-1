@@ -37,7 +37,6 @@ RecurrentUnit::RecurrentUnit(int inputs, int outputs) : Layer(inputs, outputs)
 Vector RecurrentUnit::forwardPropagation_express(const Vector & x)
 {
 	c = g(w * x + r * c + b);
-
 	if (next != nullptr) 
 		return next->forwardPropagation_express(c);
 	else
@@ -63,26 +62,12 @@ Vector RecurrentUnit::forwardPropagation(const Vector & input)
 Vector RecurrentUnit::backwardPropagation(const Vector & dy)
 {
 	//Store gradients 
-
-
-	w_gradientStorage -= (dy ->* x);
-	std::cout.precision(4);
-//	std::cout << "DY ---------------------------" << std::endl;
-//	dy.print();
-//	std::cout << " x -------------------------------" << std::endl;
-//	x.print();
-//	std::cout << "dy ->* x ------------------------" << std::endl;
-//	(dy->*x).print();
-//	std::cout << std::endl;
-//	w_gradientStorage.print();
-
+	w_gradientStorage -= (dy * x);
 	b_gradientStorage -= dy;
-	r_gradientStorage -= dy ->* c; 
+	r_gradientStorage -= dy * c; 
 	//get input error
 	Vector& dx = (w.T() * dy) & g.d(x);
 	//continue backpropagation
-
-
 	if (prev != nullptr) {
 		return prev->backwardPropagation(dx);
 	}
@@ -92,12 +77,10 @@ Vector RecurrentUnit::backwardPropagation(const Vector & dy)
 
 Vector RecurrentUnit::backwardPropagation_ThroughTime(const Vector & dy)
 {
-	//std::cout << " receinv error " << std::endl;
-	//dy.print();
 	//Store gradients 
-	w_gradientStorage -= (dy ->* Xt());
+	w_gradientStorage -= (dy * Xt());
 	b_gradientStorage -= dy;
-	r_gradientStorage -= dy ->* Ct();
+	r_gradientStorage -= dy * Ct();
 	//get input error
 	Vector& dx = (w.T() * dy) & g.d(Xt());
 	//update backprop storage
@@ -130,12 +113,6 @@ void RecurrentUnit::clearGradients()
 
 void RecurrentUnit::updateGradients()
 {
-	//std::cout << " updating gradienst " << std::endl;
-	//w_gradientStorage.print();
-	//std::cout << " scale " << std::endl;
-	//(w_gradientStorage & lr).print();
-
-
 	w += w_gradientStorage & lr;
 	b += b_gradientStorage & lr;
 	r += r_gradientStorage & lr;
