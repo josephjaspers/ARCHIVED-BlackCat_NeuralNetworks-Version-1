@@ -54,13 +54,13 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -204,7 +204,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\Matrix</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\jas_Matrices\jas_Matrices</AdditionalIncludeDirectories>
       <DisableLanguageExtensions>true</DisableLanguageExtensions>
     </ClCompile>
     <Link>
@@ -214,6 +214,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\Matrix\x64\Release\Matrix.lib</AdditionalDependencies>
     </Link>
+    <Lib>
+      <AdditionalDependencies>C:\Users\joeyj\OneDrive\Documents\Visual Studio 2015\Projects\jas_Matrices\x64\Release\jas_Matrices.lib</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_new|x64'">
     <ClCompile>
