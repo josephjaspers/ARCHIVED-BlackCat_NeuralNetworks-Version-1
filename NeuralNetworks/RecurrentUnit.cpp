@@ -68,7 +68,7 @@ Vector RecurrentUnit::backwardPropagation(const Vector & dy)
 	b_gradientStorage -= dy;
 	r_gradientStorage -= dy * c; 
 	//get input error
-	Vector dx = (w.T() * dy) & g.d(x);
+	Vector dx = (w ->* dy) & g.d(x);
 	//continue backpropagation
 	if (prev != nullptr) {
 		return prev->backwardPropagation(dx);
@@ -84,7 +84,7 @@ Vector RecurrentUnit::backwardPropagation_ThroughTime(const Vector & dy)
 	b_gradientStorage -= dy;
 	r_gradientStorage -= dy * Ct();
 	//get input error
-	Vector dx = (w.T() * dy) & g.d(Xt());
+	Vector dx = (w ->* dy) & g.d(Xt());
 	//update backprop storage
 	bpX.pop_back();
 	bpC.pop_back();

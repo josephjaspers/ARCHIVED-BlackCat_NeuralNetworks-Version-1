@@ -201,7 +201,7 @@ Vector LSTM::backwardPropagation(const Vector & dy)
 	//Store gradients
 	storeGradients();
 	//calculate input error
-	Vector dx = (wz.T() * dz + wf.T() * df + wi.T() * di + wo.T() * od);
+	Vector dx = (wz ->* dz + wf ->* df + wi ->* di + wo ->* od);
 
 
 	//continue backpropagation
@@ -215,7 +215,7 @@ Vector LSTM::backwardPropagation(const Vector & dy)
 Vector LSTM::backwardPropagation_ThroughTime(const Vector & deltaError)
 {
 	//calculate delta 
-	Vector dy = deltaError + rz.T() * dz + ri.T() * di + rf.T() * df + ro.T() * od;
+	Vector dy = deltaError + rz ->* dz + ri ->* di + rf ->* df + ro ->* od;
 	//math of error 
 	dc += dy & g.d(y) & Ot() & g.d(g.nonLin(Ct()));
 	od = dc & g.nonLin(Ct()) & o_g.d(Ot());
@@ -225,7 +225,7 @@ Vector LSTM::backwardPropagation_ThroughTime(const Vector & deltaError)
 	//Store gradients 
 
 	//get input error
-	Vector dx = (wz.T() * dz) + (wf.T() * df) + (wi.T() * di) + (wo.T() * od);
+	Vector dx = (wz ->* dz) + (wf ->* df) + (wi ->* di) + (wo ->* od);
 	//send the error through the gate 
 	dc &= Ft();
 	//update backprop storage

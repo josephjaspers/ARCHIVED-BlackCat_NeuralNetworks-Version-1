@@ -9,6 +9,7 @@ FF_norec::FF_norec(int inputs, int outputs) : Layer(inputs, outputs)
 	b = Vector(outputs);
 	w = Matrix(outputs, inputs);
 	x = Vector(inputs);
+	a = Vector(outputs);
 
 	//Matrices::randomize(b, -4, 4);
 	//Matrices::randomize(w, -4, 4);
@@ -18,8 +19,8 @@ FF_norec::FF_norec(int inputs, int outputs) : Layer(inputs, outputs)
 
 Vector FF_norec::forwardPropagation_express(const Vector & x)
 {
-	Vector a = w * x + b;
-	a = g(a);
+	a = w * x + b;
+	g(a);
 
 	if (next != nullptr)
 		return next->forwardPropagation_express(a);
@@ -30,7 +31,7 @@ Vector FF_norec::forwardPropagation_express(const Vector & x)
 Vector FF_norec::forwardPropagation(const Vector & input)
 {
 	x = input;
-	Vector a = w * x + b;
+	a = w * x + b;
 	g(a);
 	if (next != nullptr)
 		return next->forwardPropagation(a);
@@ -44,7 +45,7 @@ Vector FF_norec::backwardPropagation(const Vector & dy)
 	w_gradientStorage -= (dy * x);
 	b_gradientStorage -= dy;
 	//input delta
-	Vector dx = w.T() * dy & g.d(x);
+	Vector dx = w ->* dy & g.d(x);
 
 	//continue backprop0
 	if (prev != nullptr)
@@ -60,7 +61,7 @@ Vector FF_norec::backwardPropagation_ThroughTime(const Vector & dy)
 	w_gradientStorage -= (dy * x);
 	b_gradientStorage -= dy;
 	//input delta
-	Vector dx = w.T() * dy & g.d(x);
+	Vector dx = w ->* dy & g.d(x);
 	//continue backprop
 	if (prev != nullptr)
 		return prev->backwardPropagation_ThroughTime(dx);

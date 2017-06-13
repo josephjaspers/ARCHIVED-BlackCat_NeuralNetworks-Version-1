@@ -4,9 +4,10 @@
 
 class FF_norec : public Layer {
 
-	Vector b;
-	Vector x;
-	Matrix w;
+	Vector a;		//activation (output)
+	Vector b;		//bias
+	Vector x;		//input
+	Matrix w;		//weight
 	Vector b_gradientStorage;
 	Matrix w_gradientStorage;
 
