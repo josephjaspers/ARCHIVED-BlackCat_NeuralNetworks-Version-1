@@ -13,7 +13,7 @@ public:
 	}
 	void write(std::ofstream& os) {
 		os << nonLinearity << ' ';
-	}	
+	}
 	void setNonLinearityFunction(int i) {
 		nonLinearity = i;
 	}
@@ -27,42 +27,42 @@ private:
 	//VECTOR nonlin ---VECTOR---VECTOR---VECTOR---VECTOR---VECTOR---VECTOR---VECTOR---VECTOR---VECTOR---VECTOR---VECTOR---VECTOR---VECTOR---VECTOR---VECTOR---
 	//nonlinear functions & derivatives
 	static Vector& sigmoid(Vector& x) {
-		for (int i = 0; i < x.length(); ++i) {
-			x[i] = 1 / (1 + pow(2.7182, -x[i]));
+		for (int i = 0; i < x.size(); ++i) {
+			x[i] = 1 / (1 + pow(2.71828, -x[i]));
 		}
 		return x;
 	}
 	static Vector sigmoid_deriv(Vector x) {
-		for (int i = 0; i < x.length(); ++i) {
+		for (int i = 0; i < x.size(); ++i) {
 			x[i] *= (1 - x[i]);
 		}
 		return x;
 	}
 	static Vector& tanh(Vector& x) {
-		for (int i = 0; i < x.length(); ++i) {
+		for (int i = 0; i < x.size(); ++i) {
 			x[i] = std::tanh(x[i]);
 		}
 		return x;
 	}
 	static Vector tanh_deriv(Vector x) {
-		for (int i = 0; i < x.length(); ++i) {
+		for (int i = 0; i < x.size(); ++i) {
 			x[i] = (1 - pow(x[i], 2));
 		}
 		return x;
 	}
 	static Vector& softMax(Vector& x) {
 		double sum = 0;
-		for (int i = 0; i < x.length(); ++i) {
+		for (int i = 0; i < x.size(); ++i) {
 			x[i] = pow(e, x[i]);
 			sum += x[i];
 		}
-		for (int i = 0; i < x.length(); ++i) {
+		for (int i = 0; i < x.size(); ++i) {
 			x[i] /= sum;
 		}
 		return x;
 	}
 	static Vector& reLU(Vector& x) {
-		for (int i = 0; i < x.length(); ++i) {
+		for (int i = 0; i < x.size(); ++i) {
 			if (x[i] < 0) {
 				x[i] = 0;
 			}
@@ -77,7 +77,6 @@ private:
 	}
 
 public:
-
 	//operator for sigmoidfunction
 	Vector& operator() (Vector& x) {
 		switch (nonLinearity) {

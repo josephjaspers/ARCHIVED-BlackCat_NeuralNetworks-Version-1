@@ -10,14 +10,16 @@ FF_norec::FF_norec(int inputs, int outputs) : Layer(inputs, outputs)
 	w = Matrix(outputs, inputs);
 	x = Vector(inputs);
 
-	Matrices::randomize(b, -4, 4);
-	Matrices::randomize(w, -4, 4);
+	//Matrices::randomize(b, -4, 4);
+	//Matrices::randomize(w, -4, 4);
+	b.randomize(-4, 4);
+	w.randomize(-4, 4);
 }
 
 Vector FF_norec::forwardPropagation_express(const Vector & x)
 {
 	Vector a = w * x + b;
-	g(a);
+	a = g(a);
 
 	if (next != nullptr)
 		return next->forwardPropagation_express(a);

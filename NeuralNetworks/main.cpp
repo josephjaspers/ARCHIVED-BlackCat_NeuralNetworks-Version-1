@@ -7,9 +7,6 @@
 #include "LSTM.h"
 using namespace std;
 
-
-using namespace std;
-
 namespace testClass {
 	void print(vector<double> v) {
 		cout.precision(1);
@@ -17,7 +14,6 @@ namespace testClass {
 			cout << dz << " ";
 		}
 		cout << endl;
-
 	}
 	void printConf(vector<double> v) {
 		cout.precision(2);
@@ -232,7 +228,7 @@ void printConf(Vector& x) {
 
 	int best = -1;
 	double bestVal = -1;
-	for (int i = 0; i < x.length(); ++i) {
+	for (int i = 0; i < x.size(); ++i) {
 		if (bestVal < x[i]) {
 			bestVal = x[i];
 			best = i;
@@ -322,8 +318,8 @@ void conv_drTest() {
 
 	//network.push_back(new FeedForward(25, 320));
 	//network.push_back(new FeedForward(320, 10));
-	network.push_back(new FF_norec(25, 80));
-	network.push_back(new FF_norec(80, 10));
+	network.push_back(new FF_norec(25, 10));
+	network.push_back(new FF_norec(10, 10));
 
 	//network.push_back(new CNN(5, 5, 2, 1));
 	//network.push_back(new FeedForward(16, 10));
@@ -448,8 +444,5 @@ void XORtest() {
 
 int main() {
  conv_drTest();
-	//reccurent_drTest();
-
-	
-	
+ reccurent_drTest();
 }

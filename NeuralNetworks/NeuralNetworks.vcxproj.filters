@@ -45,9 +45,6 @@
     <ClInclude Include="LSTM.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Header.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="FF_norec.h">
       <Filter>Header Files</Filter>
     </ClInclude>
